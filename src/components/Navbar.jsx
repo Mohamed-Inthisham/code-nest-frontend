@@ -1,35 +1,33 @@
-import { Component } from 'react';
-import logo from '../components/CodeNest2.jpeg';
-import '../components/Navbar.css';
+import React from "react";
+import '../css/Navbar.css'
+import Logo from '../images/logo.jpeg'
+import { Link } from "react-router-dom";
 
-class Navbar extends Component{
-    state = { clicked: false};
-    handleClick = ()=>{
-        this.setState({clicked:!this.state.clicked})
-    }
-    render() {
-    return(
-        <>
-            <nav>
-                <a></a>
-                <img src={logo} alt="Logo" className="navbar-brand" />
-                <div>
-                    <ul id='navbar' className={this.state.clicked ? "#navbar active" : "#navbar"}>
-                        <li><a className="active" href="index.html">Home</a></li>
-                        <li><a href="index.html">Courses</a></li>
-                        <li><a href="index.html">Mentoring</a></li>
-                        <li><a href="index.html">hello</a></li>
-                        <li><a href="index.html"><i class="fas fa-user"></i></a></li>
-                    </ul>
-                </div>
-                <div id='mobile' onClick={this.handleClick}>
-                    <i id='bar' className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
 
-                </div>
-            </nav>
-        </>
-    );
-  }
+function Navbar() {
+  return (
+    <div>
+      <nav className="navbar navbar-example navbar-expand-lg bg-dark">
+        <div className="container-fluid">
+          <div><span ><img className="logo" src={Logo} alt="" /></span></div>
+          
+          <div className="collapse navbar-collapse" id="navbar-ex-3">
+            <div className="navbar-nav me-auto navlinks">
+            <div className="navbar-nav me-auto navlinks">  
+              <a className="nav-item nav-link" href="/homepage">Home</a>
+              <a className="nav-item nav-link" href="/courses">Courses</a>
+              <a className="nav-item nav-link" href="/mentoring">Mentoring</a>
+            </div>
+
+            </div>
+            <div>
+            <i className="bx bx-user-circle" id="userlogo" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
 }
 
 export default Navbar;

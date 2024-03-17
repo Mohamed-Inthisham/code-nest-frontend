@@ -4,7 +4,7 @@
     align-items: center;
     height: 70vh;  Adjust the height to center the card vertically */
     /*new*/
-    margin-top: -3px;
+    margin-top: 0px;
     width: 45%;
     height: 500px;
     background-color: bisque;

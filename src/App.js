@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Courses from "./pages/Courses";
 import Mentoring from "./pages/Mentoring";
 import Homepage from "./pages/Homepage";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
+        <Route path="/" element={<Login />}></Route>
           <Route path="/homepage" element={<Homepage />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/mentoring" element={<Mentoring />}></Route>

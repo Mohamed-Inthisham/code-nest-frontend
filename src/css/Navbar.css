@@ -1,0 +1,17 @@
+.navlinks{
+    position: absolute;
+    left: 60%;
+    gap: 70px;
+    top: 15%;
+}
+#userlogo{
+    position: absolute;
+    right: 3%;
+    top: 8%;
+    font-size: 50px;
+}
+.logo{
+    width: 150px;
+    height: 50px;
+    opacity: 80%;
+}

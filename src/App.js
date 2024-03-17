@@ -1,17 +1,22 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar.jsx";
-import Login from "./pages/Login";
-
-
+import Navbar from "./components/Navbar";
+import Courses from "./pages/Courses";
+import Mentoring from "./pages/Mentoring";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-   <div>
-    {/* <Login /> */}
-    {/* <Navbar /> */}
-    <Login />
-   </div>
-   
+    <div>
+      <Navbar />
+      <Router>
+        <Routes>
+          <Route path="/homepage" element={<Homepage />}></Route>
+          <Route path="/courses" element={<Courses />}></Route>
+          <Route path="/mentoring" element={<Mentoring />}></Route>
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

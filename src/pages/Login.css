@@ -1,0 +1,33 @@
+.card {
+    height: 560px;
+    border-radius: 20px; /* Adjust the border-radius to change the shape of the card */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  .authentication-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height to center the card vertically */
+  }
+  
+  .authentication-inner {
+    /*max-width: 400px;  Adjust the max-width of the card 
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+    background-color: #ffffff; /* Set background color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background: url() no repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container-xxl{
+    background-color: rgb(219, 244, 244);
+  }
+  

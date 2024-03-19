@@ -1,0 +1,41 @@
+.certificatebtn {
+    margin: 50px 0 0 0 ; 
+    margin-left: 40px;
+  }
+
+  .internshipReqBtn{
+    margin: 25px 0; 
+    margin-left: 33px;
+  }
+  .topic{
+    align-self: center;
+    font-family:sans-serif;
+    padding: 20px;
+  }
+  .subtopic{
+    margin:20px 100px;
+    font-family:sans-serif;
+    
+  }
+  .mb-4 {
+    margin-bottom: .5rem !important;
+}
+.ulList{
+    list-style: disc;
+    margin: 10px 85px;
+}
+.card{
+  width: 50%;
+  margin-top: 2%;
+  margin-left: 6%;
+}
+.answer1{
+  width: 350px;
+  margin-bottom: 15px;
+  
+}
+.answer1 {
+  display: flex;
+  align-items: center; /* This aligns the items vertically in the center, if needed */
+  
+}

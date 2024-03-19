@@ -1,16 +1,16 @@
 import React from 'react';
-import '../css/Login.css';
+import '../css/Register.css';
 
-const Login = () => {
+const Register = () => {
   return (
-    <>
+<>
   <meta charSet="utf-8" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
   <title>
-    Login Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro
+    Register Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro
   </title>
   <meta name="description" content="" />
   {/* Favicon */}
@@ -54,49 +54,63 @@ const Login = () => {
   <div className="container-xxl">
     <div className="authentication-wrapper authentication-basic container-p-y">
       <div className="authentication-inner">
-        <div><br></br>
-          <br></br>
-        </div>
-        {/* Register */}
+        {/* Register Card */}
         <div className="card">
           <div className="card-body">
             {/* Logo */}
             <div className="app-brand justify-content-center">
               <a href="index.html" className="app-brand-link gap-2">
-              
+                
               </a>
             </div>
             {/* /Logo */}
             <br></br>
-            <h4 className="mb-2">Welcome to Code Nest! 👋</h4>
-            
-            <p className="mb-4">
-              <br></br>
-              Please Sign-In to your account and start the learning..
-            </p>
+            <h4 className="mb-2">Learning starts here 🚀</h4>
+            {/* <p className="mb-4">Make your app management easy and fun!</p> */}
             <form id="formAuthentication" className="mb-3" action="index.html">
+              <div className="mb-2">
+                <label htmlFor="firstname" className="form-label">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="Enter your first name"
+                  autofocus=""
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="lastname" className="form-label">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter your last name"
+                  autofocus=""
+                />
+              </div>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-                  Email or Username
+                  Email
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="email"
-                  name="email-username"
-                  placeholder="Enter your email or username"
+                  name="email"
+                  placeholder="Enter your email"
                   autofocus=""
                 />
               </div>
               <div className="mb-3 form-password-toggle">
-                <div className="d-flex justify-content-between">
-                  <label className="form-label" htmlFor="password">
-                    Password
-                  </label>
-                  <a href="auth-forgot-password-basic.html">
-                    <small>Forgot Password?</small>
-                  </a>
-                </div>
+                <label className="form-label" htmlFor="password">
+                Password
+                </label>
                 <div className="input-group input-group-merge">
                   <input
                     type="password"
@@ -111,40 +125,57 @@ const Login = () => {
                   </span>
                 </div>
               </div>
+              <div className="mb-3 form-password-toggle">
+                <label className="form-label" htmlFor="password">
+                Re-type Password
+                </label>
+                <div className="input-group input-group-merge">
+                  <input
+                    type="password"
+                    id="re-type_password"
+                    className="form-control"
+                    name="re-type_password"
+                    placeholder="············"
+                    aria-describedby="password"
+                  />
+                  <span className="input-group-text cursor-pointer">
+                    <i className="bx bx-hide" />
+                  </span>
+                </div>
+              </div>
               <div className="mb-3">
                 <div className="form-check">
                   <input
                     className="form-check-input"
                     type="checkbox"
-                    id="remember-me"
+                    id="terms-conditions"
+                    name="terms"
                   />
-                  <label className="form-check-label" htmlFor="remember-me">
-                    {" "}
-                    Remember Me{" "}
+                  <label
+                    className="form-check-label"
+                    htmlFor="terms-conditions"
+                  >
+                    I agree to
+                    <a href="javascript:void(0);"> privacy policy &amp; terms</a>
                   </label>
                 </div>
               </div>
-              <div><br></br></div>
-              <div className="mb-3">
-                <button className="btn btn-primary d-grid w-100" type="submit">
-                  Sign in
-                </button>
-              </div>
+              <button className="btn btn-primary d-grid w-100">Sign up</button>
             </form>
             <p className="text-center">
-              <span>New on our platform?</span>
-              <a href="register">
-                <span> Create an account</span>
+              <span>Already have an account?</span>
+              <a href="/">
+                <span> Sign in instead</span>
               </a>
             </p>
           </div>
         </div>
-        {/* /Register */}
+        {/* Register Card */}
       </div>
     </div>
   </div>
   {/* / Content */}
-  
+  ?
   {/* Core JS */}
   {/* build:js assets/vendor/js/core.js */}
   {/* endbuild */}
@@ -153,8 +184,7 @@ const Login = () => {
   {/* Page JS */}
   {/* Place this tag in your head or just before your close body tag. */}
 </>
+  )
+}
 
-  );
-};
-
-export default Login;
+export default Register;

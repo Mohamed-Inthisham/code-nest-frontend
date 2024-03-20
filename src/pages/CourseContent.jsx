@@ -1,5 +1,5 @@
 import React from 'react'
-import '../pages/CourseContent.css'
+import '../css/CourseContent.css'
 import { Link } from 'react-router-dom';
 
 export default function CourseContent() {
@@ -62,7 +62,7 @@ export default function CourseContent() {
             <a href="#" target="_blank" class="btn rounded-pill btn-outline-success">Claim Certificate</a>
          </div>
          <div className="internshipReqBtn">
-      <Link to="/internshipreq" className="btn btn-dark">Internship Request</Link>
+      <Link to="/internshipReqForm" className="btn btn-dark">Internship Request</Link>
     </div>
        
       
@@ -84,34 +84,93 @@ export default function CourseContent() {
                 <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
                 <li>boolean - stores values with two states: true or false</li>
         </ul>
-        <form>
-        <div class="card">
+    <form>
+        <div class="card1">
         
-          <div class="card-body">
-            <h5 class="card-title">Examples</h5>
+          <div class="card-body1">
+            <h5 class="card-title1">Examples</h5>
               <p class="card-text"><b>Create a variable called name of type String and assign it the value "John":</b></p>
                <p>String name = "John";<br />
                System.out.println(name);</p>
+               <button type="button" id="try-it-self-btn1" class="btn btn-success">Try it Yor Self</button>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Test Yourself With Exercises </h5>
+        <div class="card1">
+        
+          <div class="card-body1">
+            <h5 class="card-title1">Examples</h5>
+              <p class="card-text"><b>Create a variable called myNum of type int and assign it the value 15:</b></p>
+               <p>int myNum = 15;<br />
+               System.out.println(myNum);</p>
+               <button type="button" id="try-it-self-btn2" class="btn btn-success">Try it Yor Self</button>
+          </div>
+        </div>
+
+        <div class="card1">
+        
+        <div class="card-body1">
+          <h5 class="card-title1">Examples</h5>
+            <p class="card-text"><b>You can also declare a variable without assigning the value, and assign the value later:</b></p>
+             <p>int myNum;<br />
+             myNum = 15;<br />
+             System.out.println(myNum);</p>
+             <button type="button" id="try-it-self-btn3" class="btn btn-success">Try it Yor Self</button>
+        </div>
+      </div>
+         
+        <div class="card1">
+          <div class="card-body-exe">
+            <h5 id="topic-exe">Test Yourself With Exercises </h5>
               <p class="card-text">Create a variable named carName and assign the value Volvo to it.</p>
-              
-               <div className="answer1">
-               <input type="text"id="ans1"class="form-control" />
-               <input type="text"id="ans2"class="form-control" />  =  
-               <input type="text"id="ans3"class="form-control" /> 
-               </div>
-               <button type="button" class="btn btn-info">Submit</button>
+                <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">String car ="Volvo";</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">String Volvo= "car";</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">"Volvo" car = String;</label>
+                  </div> 
+
+               <button type="button" id="btnn" class="btn btn-info">Submit</button>
+               
                
           </div>
-       
-          
         </div>
-        </form>
+
+        <div class="card1">
+          <div class="card-body-exe">
+            <h5 id="topic-exe">Test Yourself With Exercises </h5>
+              <p class="card-text">Create a variable named maxSpeed and assign the value 120 to it.</p>
+                <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">120 =Int maxSpeed;</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">Int maxSpeed=120;</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">maxSpeed Int = 120</label>
+                  </div> 
+
+               <button type="button" id="btnn" class="btn btn-info">Submit</button>
+               
+               
+          </div>
+        </div>
+
+
+    </form>
         
         
       </div>

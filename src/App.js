@@ -10,6 +10,7 @@ import InternshipReqForm from './pages/InternshipReqForm';
 import CourseContent from "./pages/CourseContent";
 import Resources from "./pages/Resources"
 import Discuss from "./pages/Discuss";
+import MentorHomePage from "./pages/MentorHomePage";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="/InternshipReqForm" element={<InternshipReqForm />}></Route>
           <Route path="/CourseContent" element={<CourseContent />}></Route>
 
+          <Route path="/mentorHomePage" element={<MentorHomePage />}></Route>
+          
         </Routes>
       </Router>
     </div>

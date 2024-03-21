@@ -1,0 +1,29 @@
+.buttonv {
+    display: flex;
+    justify-content: space-around; /* Adjust as per your requirement */
+    align-items: center; /* Adjust as per your requirement */
+    height: 400px;
+    width: 70%;
+    background-color:rgb(41, 150, 213);
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+  
+  .icon-name {
+    flex: 1;
+    /*max-width: 50%;  Adjust as per your requirement */
+    padding: 20px; /* Adjust as per your requirement */
+    font-size: 24px; /* Adjust as per your requirement */
+  }
+
+  .cardv {
+    background-color:azure;
+    height: 200px;
+  }
+
+  .bx{
+    background-color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+
+  

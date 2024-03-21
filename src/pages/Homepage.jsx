@@ -4,13 +4,13 @@ import test from "../images/test1.png";
 import image1 from "../images/homeCard1.jpeg";
 import image2 from "../images/homeCard2.jpeg";
 import image3 from "../images/homeCard3.jpeg";
-import image4 from "../images/com1.png";
-import image5 from "../images/com2.png";
-import image6 from "../images/com3.png";
-import image7 from "../images/com4.png";
-import image8 from "../images/com5.png";
-import image9 from "../images/com6.png";
-import image10 from "../images/com7.png";
+import image4 from "../images/company1.png";
+import image5 from "../images/company2.png";
+import image6 from "../images/company3.png";
+import image7 from "../images/company4.png";
+import image8 from "../images/company5.png";
+import image9 from "../images/company6.png";
+import image10 from "../images/company7.png";
 
 function Homepage() {
   const ref = useRef(null);

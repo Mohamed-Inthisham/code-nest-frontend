@@ -51,14 +51,15 @@ const Login = () => {
   {/*! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section */}
   {/*? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  */}
   {/* Content */}
-  <div className="container-xxl">
-    <div className="authentication-wrapper authentication-basic container-p-y">
-      <div className="authentication-inner">
+  <div className="container-xxlv">
+    <div className="authentication-wrapperv authentication-basic container-p-y">
+      <div className="authentication-innerv">
         <div><br></br>
           <br></br>
         </div>
         {/* Register */}
         <div className="card">
+          <div className='cardv-login'>
           <div className="card-body">
             {/* Logo */}
             <div className="app-brand justify-content-center">
@@ -94,7 +95,7 @@ const Login = () => {
                     Password
                   </label>
                   <a href="auth-forgot-password-basic.html">
-                    <small>Forgot Password?</small>
+                    <small className='cursor-pointer'>Forgot Password?</small>
                   </a>
                 </div>
                 <div className="input-group input-group-merge">
@@ -134,9 +135,10 @@ const Login = () => {
             <p className="text-center">
               <span>New on our platform?</span>
               <a href="register">
-                <span> Create an account</span>
+                <span className='cursor-pointer'> Create an account</span>
               </a>
             </p>
+            </div>
           </div>
         </div>
         {/* /Register */}

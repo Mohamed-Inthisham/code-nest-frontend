@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from './pages/Register';
 import InternshipReqForm from './pages/InternshipReqForm';
 import CourseContent from "./pages/CourseContent";
+import MentorHomePage from "./pages/MentorHomePage";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/mentoring" element={<Mentoring />}></Route>
           <Route path="/internshipReqForm" element={<InternshipReqForm />}></Route>
           <Route path="/courseContent" element={<CourseContent />}></Route>
+          <Route path="/mentorHomePage" element={<MentorHomePage />}></Route>
+          
         </Routes>
       </Router>
     </div>

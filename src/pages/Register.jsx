@@ -166,7 +166,7 @@ const Register = () => {
             <p className="text-center">
               <span>Already have an account?</span>
               <a href="/">
-                <span> Sign in instead</span>
+                <span className='cursor-pointer'> Sign in instead</span>
               </a>
             </p>
           </div>

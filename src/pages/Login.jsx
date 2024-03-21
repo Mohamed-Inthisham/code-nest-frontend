@@ -95,7 +95,7 @@ const Login = () => {
                     Password
                   </label>
                   <a href="auth-forgot-password-basic.html">
-                    <small>Forgot Password?</small>
+                    <small className='cursor-pointer'>Forgot Password?</small>
                   </a>
                 </div>
                 <div className="input-group input-group-merge">
@@ -135,7 +135,7 @@ const Login = () => {
             <p className="text-center">
               <span>New on our platform?</span>
               <a href="register">
-                <span> Create an account</span>
+                <span className='cursor-pointer'> Create an account</span>
               </a>
             </p>
             </div>

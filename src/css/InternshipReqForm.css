@@ -1,5 +1,87 @@
+.req-to{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
 .row-con{
-    width: 50%;
-    margin-top: 8%;
-    margin-left: 20%;
+   
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.card{
+    width: fit-content;
+    height: fit-content;
+}
+.layout-content-navbar .layout-page-home{
+    flex-basis: 100%;
+    flex-direction: column;
+    width: 0;
+    min-width: 0;
+    max-width: 100%;
+}
+.layout-page-home {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: stretch;
+    padding: 0;
+}
+.card-form {
+    width: fit-content;
+    height:fit-content;
+}
+.card-form {
+    margin-top: -16px;
+    left: 28%;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 485px;
+    max-height: 590px;
+    justify-content: center;
+    align-items: center;
+}
+.card-form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+}
+.card-form {
+    --bs-card-spacer-y: 1.5rem;
+    --bs-card-spacer-x: 1.5rem;
+    --bs-card-title-spacer-y: 0.875rem;
+    --bs-card-title-color: #566a7f;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: #d9dee3;
+    --bs-card-border-radius: 0.5rem;
+    --bs-card-box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+    --bs-card-inner-border-radius: 0.5rem;
+    --bs-card-cap-padding-y: 1.5rem;
+    --bs-card-cap-padding-x: 1.5rem;
+    --bs-card-cap-bg: transparent;
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: #fff;
+    --bs-card-img-overlay-padding: 1.5rem;
+    --bs-card-group-margin: 0.8125rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+}
+
+.card-body-1 {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+}
+
+.text-feild {
+    margin-bottom: 1rem !important;
+}
+.btn-primary{
+    margin-top: 15px;
+    
 }

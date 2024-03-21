@@ -14,9 +14,9 @@ function Courses() {
   return (
     <div className="text-one-main">
       <div className="text-one"> My Learnings </div>
-      <br></br>
+        <br></br>
 
-              <div className="row row-cols-1 row-cols-md-3 g-4 mb-5">
+              <div className="row row-cols-1 row-cols-md-3 g-4 mb-5 my-learning-test">
                 <div className="col">
                   <div className="card h-100">
                     <img className="card-img-top" src={image8} alt="Card image cap" />

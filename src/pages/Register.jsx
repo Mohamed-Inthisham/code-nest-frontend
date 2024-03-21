@@ -55,8 +55,7 @@ const Register = () => {
     <div className="authentication-wrapperv authentication-basic container-p-y">
       <div className="authentication-innerv">
         {/* Register Card */}
-        <div className="card">
-          <div className='cardv-reg'>
+        <div className="card cardv-reg">
           <div className="card-body">
             {/* Logo */}
             <div className="app-brand justify-content-center">
@@ -169,7 +168,6 @@ const Register = () => {
                 <span className='cursor-pointer'> Sign in instead</span>
               </a>
             </p>
-          </div>
           </div>
         </div>
         {/* Register Card */}

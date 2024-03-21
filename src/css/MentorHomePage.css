@@ -9,10 +9,10 @@
     margin-left: 15%;
   }
   
-  .icon-name {
+  .namev {
     flex: 1;
-    /*max-width: 50%;  Adjust as per your requirement */
-    padding: 20px; /* Adjust as per your requirement */
+    max-width: 100%;  /*Adjust as per your requirement */
+    padding: 40px; /* Adjust as per your requirement */
     font-size: 24px; /* Adjust as per your requirement */
   }
 

@@ -1,0 +1,112 @@
+.first-text-image{
+    margin: 60px;
+}
+
+.first-text{
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.home-text{
+    font-size: 24px;
+    color: black;
+    
+}
+
+.card-text{
+    color: black;
+}
+
+.card-title{
+    color: black;
+    font-weight: bold;
+}
+
+.title-text{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: serif;
+    color: rgb(17, 47, 107);
+}
+
+.picture-home{
+    height: 400px;
+    width: 600px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.card-container{
+    margin: 90px;
+}
+
+.company-image1{
+    margin: 50px;
+    margin-top: 60px;
+    width: 100px;
+    height: 60px;
+}
+
+.company-image2{
+    padding-top: 55px;
+    width: 150px;
+    height: 110px;
+}
+
+.company-image3{
+    padding-top: 16px;
+}
+
+.company-image4{
+    padding-top: 70px;
+}
+
+.company-image5{
+    padding-top: 20px;
+}
+
+.company-image6{
+    padding-top: 60px;
+}
+
+.company-image7{
+    padding-top: -50px;
+}
+
+.smaller-image {
+    max-width: 500px; /* Set the maximum width here */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.bn-article{
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgb(17, 47, 107);
+    border-radius: 5px;
+    transform: 400ms opacity ease,400ms transform ease;
+    
+}
+
+.bn-article:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.bn-article-sub{
+    color: white;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.trans-test{
+    transform: 400ms opacity ease,400ms transform ease;
+    opacity: 0.8;
+}
+
+.trans-test:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}

@@ -1,15 +1,12 @@
-.card {
-    /*display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;  Adjust the height to center the card vertically */
-    /*new*/
-    margin-top: -16px;
-    width: 45%;
-    background-color: bisque;
-    align-items: center;
-    left: 28%;
-    background-color: rgba(255, 255, 255, 0.8);
+  .authentication-innerv .card{
+    background-color: transparent;
+  }
+  
+  .cardv-reg{
+    background-color: rgb(255, 255, 255, 0.8);
+    margin-top: -40px;
+    margin-left: 255px;
+    width: 450px;
     min-height: 485px;
     /* Optionally set a maximum width to avoid excessively wide cards */
     max-height: 590px;
@@ -17,11 +14,10 @@
     height: auto;
     justify-content: center; /* Horizontal centering */
     align-items: center; 
-    
-  } 
+  }
 
   
-  .authentication-wrapper{
+  .authentication-wrapperv{
     /*max-width: 400px;  Adjust the max-width of the card 
     width: 100%;
     height: 600px;
@@ -42,7 +38,10 @@
   }
 
    .form-control {
-    width: 350px;
+    width: 400px;
+  }
+  .cardv-reg .text-center{
+    margin-top: -6px;
   }
 
   

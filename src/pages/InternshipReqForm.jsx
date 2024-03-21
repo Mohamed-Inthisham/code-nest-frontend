@@ -1,5 +1,5 @@
 import React from 'react'
-import '../pages/InternshipReqForm.css'
+import '../css/InternshipReqForm.css'
 
 export default function InternshipReqForm() {
   return (

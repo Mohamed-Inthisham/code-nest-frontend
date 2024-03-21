@@ -51,11 +51,12 @@ const Register = () => {
   {/*! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section */}
   {/*? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  */}
   {/* Content */}
-  <div className="container-xxl">
-    <div className="authentication-wrapper authentication-basic container-p-y">
-      <div className="authentication-inner">
+  <div className="container-xxlv">
+    <div className="authentication-wrapperv authentication-basic container-p-y">
+      <div className="authentication-innerv">
         {/* Register Card */}
         <div className="card">
+          <div className='cardv-reg'>
           <div className="card-body">
             {/* Logo */}
             <div className="app-brand justify-content-center">
@@ -64,7 +65,7 @@ const Register = () => {
               </a>
             </div>
             {/* /Logo */}
-            <br></br>
+            
             <h4 className="mb-2">Learning starts here 🚀</h4>
             {/* <p className="mb-4">Make your app management easy and fun!</p> */}
             <form id="formAuthentication" className="mb-3" action="index.html">
@@ -168,6 +169,7 @@ const Register = () => {
                 <span> Sign in instead</span>
               </a>
             </p>
+          </div>
           </div>
         </div>
         {/* Register Card */}

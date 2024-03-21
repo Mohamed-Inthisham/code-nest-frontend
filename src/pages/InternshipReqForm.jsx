@@ -72,9 +72,9 @@ export default function InternshipReqForm() {
 
     <div className="layout-page">
 
-    <div class="row">
-                <div class="col-lg">
-                  <div class="card mb-8 ">
+    <div class="row-con">
+                <div class="col-lg1">
+                  <div class="card ">
                     <div class="card-header d-flex justify-content-between align-items-center">
                       <h3 class="mb-0"><b>Request to Internship</b></h3>
                     </div>

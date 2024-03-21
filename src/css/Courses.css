@@ -1,0 +1,12 @@
+.text-one{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(17, 47, 107);
+}
+
+.text-one-main{
+    margin-left: 40px;
+    margin-right: 40px;
+}

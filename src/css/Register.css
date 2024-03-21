@@ -1,0 +1,49 @@
+.card {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;  Adjust the height to center the card vertically */
+    /*new*/
+    margin-top: -16px;
+    width: 45%;
+    background-color: bisque;
+    align-items: center;
+    left: 28%;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 485px;
+    /* Optionally set a maximum width to avoid excessively wide cards */
+    max-height: 590px;
+    /* Optionally set a width to accommodate shorter content better */
+    height: auto;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; 
+    
+  } 
+
+  
+  .authentication-wrapper{
+    /*max-width: 400px;  Adjust the max-width of the card 
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+    background-color: #ffffff; /* Set background color */
+    border-radius: 20px; /* Adjust the border-radius to change the shape of the card */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 610px;
+    background: url(../images/login.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 200px;
+  }
+
+   .form-control {
+    width: 350px;
+  }
+
+  
+  

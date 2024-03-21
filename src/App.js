@@ -4,6 +4,10 @@ import Navbar from "./components/Navbar";
 import Courses from "./pages/Courses";
 import Mentoring from "./pages/Mentoring";
 import Homepage from "./pages/Homepage";
+import Login from "./pages/Login";
+import Register from './pages/Register';
+import InternshipReqForm from './pages/InternshipReqForm';
+import CourseContent from "./pages/CourseContent";
 import Resources from "./pages/Resources"
 import Discuss from "./pages/Discuss";
 
@@ -13,11 +17,11 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
           <Route path="/homepage" element={<Homepage />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/mentoring" element={<Mentoring />}></Route>
-          <Route path="/resources" element={<Resources />}></Route>
-          <Route path="/discuss" element={<Discuss />}></Route>
         </Routes>
       </Router>
     </div>

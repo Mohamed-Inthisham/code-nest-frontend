@@ -70,7 +70,7 @@ export default function CourseContent() {
   </aside>
  
 
-      <div className="layout-page">
+      <div className="course-content-body">
         
         <h1 className='topic'>Java Variables</h1>
         <h3 className='subtopic'>Variables are containers for storing data values.</h3>
@@ -85,9 +85,9 @@ export default function CourseContent() {
                 <li>boolean - stores values with two states: true or false</li>
         </ul>
     <form>
-        <div class="card1">
+        <div class="card-content">
         
-          <div class="card-body1">
+          <div class="card-body-in">
             <h5 class="card-title1">Examples</h5>
               <p class="card-text"><b>Create a variable called name of type String and assign it the value "John":</b></p>
                <p>String name = "John";<br />
@@ -96,7 +96,7 @@ export default function CourseContent() {
           </div>
         </div>
 
-        <div class="card1">
+        <div class="card-content">
         
           <div class="card-body1">
             <h5 class="card-title1">Examples</h5>
@@ -107,7 +107,7 @@ export default function CourseContent() {
           </div>
         </div>
 
-        <div class="card1">
+        <div class="card-content">
         
         <div class="card-body1">
           <h5 class="card-title1">Examples</h5>
@@ -119,7 +119,7 @@ export default function CourseContent() {
         </div>
       </div>
          
-        <div class="card1">
+        <div class="card-content">
           <div class="card-body-exe">
             <h5 id="topic-exe">Test Yourself With Exercises </h5>
               <p class="card-text">Create a variable named carName and assign the value Volvo to it.</p>
@@ -144,7 +144,7 @@ export default function CourseContent() {
           </div>
         </div>
 
-        <div class="card1">
+        <div class="card-content">
           <div class="card-body-exe">
             <h5 id="topic-exe">Test Yourself With Exercises </h5>
               <p class="card-text">Create a variable named maxSpeed and assign the value 120 to it.</p>

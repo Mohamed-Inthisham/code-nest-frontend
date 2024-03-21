@@ -2,9 +2,10 @@ import React from 'react'
 import '../css/InternshipReqForm.css'
 
 export default function InternshipReqForm() {
+  
   return (
     <div>
-
+     
 <>
   
   <title>
@@ -70,22 +71,22 @@ export default function InternshipReqForm() {
   </aside>
  
 
-    <div className="layout-page">
+    <div className="layout-page-home">
 
-    <div class="row-con">
+      <div class="row-con">
                 <div class="col-lg1">
-                  <div class="card ">
+                  <div class="card-form ">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <h3 class="mb-0"><b>Request to Internship</b></h3>
+                      <h3 className='req-to'><b>Request to Internship</b></h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body-1">
                       <form>
-                        <div class="mb-3">
+                        <div class="text-feild">
                           <label class="form-label" for="basic-default-fullname">Full Name</label>
                           <input type="text" class="form-control" id="basic-default-fullname" placeholder="Enter full Name" />
                         </div>
               
-                        <div class="mb-3">
+                        <div class="text-feild">
                           <label class="form-label" for="basic-default-email">Email</label>
                           <div class="input-group input-group-merge">
                             <input
@@ -95,7 +96,7 @@ export default function InternshipReqForm() {
                           </div>
                           
                         </div>
-                        <div class="mb-3">
+                        <div class="text-feild">
                           <label class="form-label" for="basic-default-phone">Phone No</label>
                           <input
                             type="text"
@@ -103,7 +104,7 @@ export default function InternshipReqForm() {
                             class="form-control phone"
                             placeholder="Enter Phone number"/>
                         </div>
-                        <div class="mb-3">
+                        <div class="text-feild">
                               <label class="form-label" for="basic-default-file">Upload Your CV/Resume</label>
                               <input type="file" class="form-control" id="basic-default-file"/>
                         </div>

@@ -12,6 +12,7 @@ import Resources from "./pages/Resources"
 import Discuss from "./pages/Discuss";
 import MentorHomePage from "./pages/MentorHomePage";
 import InternRequest from "./pages/InternRequest";
+import ManageQuiz from "./pages/ManageQuiz";
 
 function App() {
   return (
@@ -26,12 +27,8 @@ function App() {
           <Route path="/mentoring" element={<Mentoring />}></Route>
           <Route path="/resources" element={<Resources />}></Route>
           <Route path="/discuss" element={<Discuss />}></Route>
-          <Route
-            path="/InternshipReqForm"
-            element={<InternshipReqForm />}
-          ></Route>
+          <Route path="/InternshipReqForm" element={<InternshipReqForm />}></Route>
           <Route path="/CourseContent" element={<CourseContent />}></Route>
-
           <Route path="/mentorHomePage" element={<MentorHomePage />}></Route>
           <Route path="/internRequests" element={<InternRequest />}></Route>
           <Route path="/manageQuiz" element={<ManageQuiz />}></Route>

@@ -12,8 +12,6 @@ import Resources from "./pages/Resources"
 import Discuss from "./pages/Discuss";
 import MentorHomePage from "./pages/MentorHomePage";
 import InternRequest from "./pages/InternRequest";
-import ManageQuiz from "./pages/ManageQuiz";
-
 
 function App() {
   return (

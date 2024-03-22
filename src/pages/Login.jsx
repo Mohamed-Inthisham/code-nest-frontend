@@ -58,8 +58,7 @@ const Login = () => {
           <br></br>
         </div>
         {/* Register */}
-        <div className="card">
-          <div className='cardv-login'>
+        <div className="card cardv-login">
           <div className="card-body">
             {/* Logo */}
             <div className="app-brand justify-content-center">
@@ -139,7 +138,6 @@ const Login = () => {
               </a>
             </p>
             </div>
-          </div>
         </div>
         {/* /Register */}
       </div>

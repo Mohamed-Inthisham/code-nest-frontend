@@ -11,7 +11,9 @@ import CourseContent from "./pages/CourseContent";
 import Resources from "./pages/Resources"
 import Discuss from "./pages/Discuss";
 import MentorHomePage from "./pages/MentorHomePage";
+import InternRequest from "./pages/InternRequest";
 import ManageQuiz from "./pages/ManageQuiz";
+
 
 function App() {
   return (
@@ -19,19 +21,22 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+          <Route path="/" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
           <Route path="/homepage" element={<Homepage />}></Route>
           <Route path="/courses" element={<Courses />}></Route>
           <Route path="/mentoring" element={<Mentoring />}></Route>
           <Route path="/resources" element={<Resources />}></Route>
           <Route path="/discuss" element={<Discuss />}></Route>
-          <Route path="/InternshipReqForm" element={<InternshipReqForm />}></Route>
+          <Route
+            path="/InternshipReqForm"
+            element={<InternshipReqForm />}
+          ></Route>
           <Route path="/CourseContent" element={<CourseContent />}></Route>
 
           <Route path="/mentorHomePage" element={<MentorHomePage />}></Route>
+          <Route path="/internRequests" element={<InternRequest />}></Route>
           <Route path="/manageQuiz" element={<ManageQuiz />}></Route>
-          
         </Routes>
       </Router>
     </div>

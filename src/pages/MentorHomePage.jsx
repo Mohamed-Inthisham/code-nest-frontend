@@ -50,31 +50,31 @@ const MentorHomePage = () => {
   
             {/* Icon container */}
             <div className="buttonv" id="icons-container">
-              <div className="card icon-card cursor-pointer text-center mb-4 mx-2">
-                <div className='cardv'>
+              <div className="card cardv icon-card cursor-pointer text-center mb-4 mx-2">
+                <div className=''>
                 <div className="card-body">
-                  <i className="bx bxl-adobe mb-2" />
-                  <p className="icon-name text-capitalize text-truncate mb-0">
+                  <i className="bx bxs-book mb-2" />
+                  <p className="icon-name namev text-capitalize text-truncate cursor-pointer mb-0">
                     Resourses
                   </p>
                 </div>
                 </div>
               </div>
-              <div className="card icon-card cursor-pointer text-center mb-4 mx-2">
-              <div className='cardv'>
+              <div className="card cardv icon-card cursor-pointer text-center mb-4 mx-2">
+              <div className=''>
                 <div className="card-body">
-                  <i className="<bx bx-converation mb-2" />
-                  <p className="icon-name text-capitalize text-truncate mb-0">
+                  <i className="bx bxs-conversation mb-2" />
+                  <p className="icon-name namev text-capitalize text-truncate cursor-pointer mb-0">
                     Discuss
                   </p>
                 </div>
                 </div>
               </div>
-              <div className="card icon-card cursor-pointer text-center mb-4 mx-2">
-              <div className='cardv'>
+              <div className="card cardv icon-card cursor-pointer text-center mb-4 mx-2">
+              <div className=''>
                 <div className="card-body">
-                  <i className="bx bxl-audible mb-2" />
-                  <p className="icon-name text-capitalize text-truncate mb-0">
+                  <i className="bx bxl-microsoft-teams mb-2" />
+                  <p className="icon-name namev text-capitalize text-truncate cursor-pointer mb-0">
                     Live Mentor Requests
                   </p>
                 </div>

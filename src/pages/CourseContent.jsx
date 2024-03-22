@@ -13,7 +13,7 @@ export default function CourseContent() {
   </title>
 
   <div className="layout-wrapper layout-content-navbar">
-    <div className="layout-container">
+    <div className="layout-container ">
       <aside
         id="layout-menu"
         className="layout-menu menu-vertical menu bg-menu-theme">

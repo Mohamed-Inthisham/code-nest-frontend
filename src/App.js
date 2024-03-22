@@ -34,6 +34,7 @@ function App() {
 
           <Route path="/mentorHomePage" element={<MentorHomePage />}></Route>
           <Route path="/internRequests" element={<InternRequest />}></Route>
+          <Route path="/manageQuiz" element={<ManageQuiz />}></Route>
         </Routes>
       </Router>
     </div>

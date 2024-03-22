@@ -8,9 +8,6 @@ export default function InternshipReqForm() {
      
 <>
   
-  <title>
-    Internship Request Form
-  </title>
 
 <div className="layout-wrapper layout-content-navbar">
     <div className="layout-container">

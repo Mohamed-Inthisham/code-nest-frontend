@@ -11,6 +11,7 @@ import CourseContent from "./pages/CourseContent";
 import Resources from "./pages/Resources"
 import Discuss from "./pages/Discuss";
 import MentorHomePage from "./pages/MentorHomePage";
+import ManageQuiz from "./pages/ManageQuiz";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/CourseContent" element={<CourseContent />}></Route>
 
           <Route path="/mentorHomePage" element={<MentorHomePage />}></Route>
+          <Route path="/manageQuiz" element={<ManageQuiz />}></Route>
           
         </Routes>
       </Router>

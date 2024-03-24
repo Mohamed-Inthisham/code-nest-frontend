@@ -1,0 +1,30 @@
+.btn-edit{
+    margin-right: 5px;
+}
+
+.topic-btn-combination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .main{
+    margin-left: 10px;
+  }
+
+  .btn1{
+     background-color: rgb(17, 47, 107);
+  }
+
+  .card-content.main {
+    width: calc(50% - 10px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-left: 15%;
+  }
+  
+  @media (max-width: 768px) {
+    .card-content.main {
+      width: 100%; 
+    }
+  }
+  

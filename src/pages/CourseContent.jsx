@@ -118,11 +118,11 @@ export default function CourseContent() {
              <button type="button" id="try-it-self-btn3" class="btn btn-success">Try it Yor Self</button>
         </div>
       </div>
-         
+      
         <div class="card-content">
+        <h5 id="topic-exe">Test Yourself With Exercises </h5>
           <div class="card-body-exe">
-            <h5 id="topic-exe">Test Yourself With Exercises </h5>
-              <p class="card-text">Create a variable named carName and assign the value Volvo to it.</p>
+              <p class="card-text">1.Create a variable named carName and assign the value Volvo to it.</p>
                 <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
                     <label class="form-check-label" for="inlineRadio1">String car ="Volvo";</label>
@@ -146,8 +146,8 @@ export default function CourseContent() {
 
         <div class="card-content">
           <div class="card-body-exe">
-            <h5 id="topic-exe">Test Yourself With Exercises </h5>
-              <p class="card-text">Create a variable named maxSpeed and assign the value 120 to it.</p>
+            
+              <p class="card-text">2.Create a variable named maxSpeed and assign the value 120 to it.</p>
                 <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
                     <label class="form-check-label" for="inlineRadio1">120 =Int maxSpeed;</label>

@@ -1,100 +1,88 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import CompanySidebar from '../components/CompanySidebar';
+import '../css/ManageQuiz.css'
 
 export default function ManageQuiz() {
   return (
     
     <div>
+       <div className="layout-wrapper layout-content-navbar">
+            <div className="layout-container ">
+              <CompanySidebar/>
+              <div className="course-content-body">
+                   <div className="topic-btn-combination">
 
-<>
-  <div className="layout-wrapper layout-content-navbar nav">
-    <div className="layout-container qz">
-      
-      <aside
-        id="layout-menu"
-        className="layout-menu menu-vertical menu bg-menu-theme"
-      >
-        <div className="app-brand demo">
-          <a href="index.html" className="app-brand-link">
-           
+                   <h1 className='text-one'>Manage Quizzes</h1>
+                   
+                   <button type="button" class="btn btn-primary btn1"><h1 ><a className='courseStyle' href='/addQuiz'>Add Courses</a></h1></button>
+                   </div>
+                   
+
+                   <div class="card-content main">
+                            <div class="card-body-exe">
+                                <p class="card-text">1.Create a variable named carName and assign the value Volvo to it.</p>
+                                    <div className="answer1">
+                                      
+                                        <label class="form-check-label" for="inlineRadio1">i. String car ="Volvo";</label>
+                                    </div> 
+
+                                <div className="answer1">
+                                   
+                                    <label class="form-check-label" for="inlineRadio1">ii. String Volvo= "car";</label>
+                                </div> 
+
+                                <div className="answer1">
+                                    
+                                    <label class="form-check-label" for="inlineRadio1">iii. "Volvo" car = String;</label>
+                                </div> 
+                                <div className="answer1">
+                                    
+                                    <label class="form-check-label" for="inlineRadio1">iv. car "Volvo"= String;</label>
+                                </div> 
+
+                                <button type="button" class="btn btn-info btn-edit">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+               
+               
+                            </div>
+                    </div>
+
+
+                    <div class="card-content main">
+                    <div class="card-body-exe">
             
-          </a>
-          <a
-            href="javascript:void(0);"
-            className="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none"
-          >
-            <i className="bx bx-chevron-left bx-sm align-middle" />
-          </a>
-        </div>
-        <div className="menu-inner-shadow" />
-        <ul className="menu-inner py-1">
+                            <p class="card-text">2.Create a variable named maxSpeed and assign the value 120 to it.</p>
+                                <div className="answer1">
+                                
+                                    <label class="form-check-label" for="inlineRadio1">i. 120 =Int maxSpeed;</label>
+                                </div> 
 
-          
-          <li className="menu-item active open">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
-              
-              <div data-i18n="Layouts">Courses</div>
-            </a>
-            <ul className="menu-sub menu">
-              <li className="menu-item item">
-                <a href="layouts-without-menu.html" className="menu-link">
-                  <div data-i18n="Without menu">View Courses</div>
-                </a>
-              </li>
-              <li className="menu-item ">
-                <a href="layouts-without-navbar.html" className="menu-link">
-                  <div data-i18n="Without navbar">Manage Courses</div>
-                </a>
-              </li>
-            </ul>
-          </li>
+                                <div className="answer1">
+                                    
+                                    <label class="form-check-label" for="inlineRadio1">ii. Int maxSpeed=120;</label>
+                                </div> 
 
-          <li className="menu-item active open">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
-              
-              <div data-i18n="Layouts">Quizzes</div>
-            </a>
-            <ul className="menu-sub">
-              <li className="menu-item">
-                <a href="layouts-without-menu.html" className="menu-link">
-                  <div data-i18n="Without menu">View Quizzes</div>
-                </a>
-              </li>
-              <li className="menu-item ">
-                <a href="layouts-without-navbar.html" className="menu-link">
-                  <div data-i18n="Without navbar">Manage Quizzes</div>
-                </a>
-              </li>
-            </ul>
-          </li>
+                                <div className="answer1">
+                                   
+                                    <label class="form-check-label" for="inlineRadio1">iii. maxSpeed Int = 120</label>
+                                </div> 
 
-          <li className="menu-item active ">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
-              
-              <div data-i18n="Layouts">Intern</div>
-            </a>
-            </li>
-  
-        </ul>
-      </aside>
-    
-      
-      <div className="layout-page page">
-       
-       <h3>Manage Quiz</h3>
-       
-      </div>
-      
-    </div>
- 
-    <div className="layout-overlay layout-menu-toggle" />
-  </div>
+                                <div className="answer1">
+                                   
+                                    <label class="form-check-label" for="inlineRadio1">iv. maxSpeed 120 = Int</label>
+                                </div> 
 
+                                <button type="button" class="btn btn-info btn-edit">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
 
-
-</>
-
-
+               
+                    </div>
+                </div>
+                   
+              </div>
+            </div>
+       </div>
     </div>
 
   )

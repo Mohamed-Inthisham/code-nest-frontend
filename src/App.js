@@ -19,6 +19,8 @@ import AddCourses from "./pages/AddCourses";
 import ViewRoadmap from "./pages/ViewRoadmap";
 import ViewQuizzes from "./pages/ViewQuizzes";
 import AddQuiz from "./pages/AddQuiz";
+import ManageResourses from "./pages/ManageResourses";
+import AddResourse from "./pages/AddResourse";
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
           <Route path="/viewRoadmap" element={<ViewRoadmap />}></Route>
           <Route path="/viewQuizzes" element={<ViewQuizzes />}></Route>
           <Route path="/addQuiz" element={<AddQuiz />}></Route>
+          <Route path="/manageResourses" element={<ManageResourses />}></Route>
+          <Route path="/addResourse" element={<AddResourse />}></Route>
 
         </Routes>
       </Router>

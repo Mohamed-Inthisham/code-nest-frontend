@@ -42,19 +42,19 @@ function CompanySidebar() {
                             </li>
 
                             <li className="menu-item active open">
-                                <a href="javascript:void(0);" className="menu-link menu-toggle">
+                                <a href="javascript:void(0);" className="menu-link ">
                                 
                                 <div data-i18n="Layouts">Quizzes</div>
                                 </a>
                                 <ul className="menu-sub">
                                 <li className="menu-item">
-                                    <a href="layouts-without-menu.html" className="menu-link">
+                                    <a href="viewQuizzes" className="menu-link">
                                     <div data-i18n="Without menu">View Quizzes</div>
                                     </a>
                                 </li>
                                 <li className="menu-item ">
-                                    <a href="layouts-without-navbar.html" className="menu-link">
-                                    <div data-i18n="Without navbar">Manage Quizzes</div>
+                                    <a href="/ManageQuiz" className="menu-link">
+                                    <div data-i18n="ManageQuiz">Manage Quizzes</div>
                                     </a>
                                 </li>
                                 </ul>

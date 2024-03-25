@@ -1,0 +1,17 @@
+.mainA{
+    width: 1035px;
+    margin-left: 40px;
+}
+
+.mainB{
+    margin-left: 70px;
+}
+.topic-btn{
+    display: flex;
+}
+.btn2{
+    background-color: rgb(17, 47, 107);
+   
+ }
+
+ 

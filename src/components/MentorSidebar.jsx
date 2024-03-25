@@ -48,12 +48,12 @@ function MentorSidebar() {
                                 </a>
                                 <ul className="menu-sub">
                                 <li className="menu-item">
-                                    <a href="layouts-without-menu.html" className="menu-link">
+                                    <a href="/viewResourses" className="menu-link"> 
                                     <div data-i18n="Without menu">View Resourses</div>
                                     </a>
                                 </li>
                                 <li className="menu-item ">
-                                    <a href="layouts-without-navbar.html" className="menu-link">
+                                    <a href="/ManageResourses" className="menu-link">   
                                     <div data-i18n="Without navbar">Manage Resourses</div>
                                     </a>
                                 </li>

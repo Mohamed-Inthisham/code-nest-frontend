@@ -16,6 +16,8 @@ import ManageQuiz from "./pages/ManageQuiz";
 import ViewCourses from "./pages/ViewCourses";
 import ManageCourses from "./pages/ManageCourses"
 import AddCourses from "./pages/AddCourses";
+import ViewQuizzes from "./pages/ViewQuizzes";
+import AddQuiz from "./pages/AddQuiz";
 import ViewRoadmap from "./pages/ViewRoadmap";
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
           <Route path="/viewCourses" element={<ViewCourses />}></Route>
           <Route path="/manageCourses" element={<ManageCourses />}></Route>
           <Route path="/addCourses" element={<AddCourses />}></Route>
+          <Route path="/viewQuizzes" element={<ViewQuizzes />}></Route>
+          <Route path="/addQuiz" element={<AddQuiz />}></Route>
           <Route path="/viewRoadmap" element={<ViewRoadmap />}></Route>
         </Routes>
       </Router>

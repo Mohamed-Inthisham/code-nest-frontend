@@ -1,0 +1,37 @@
+.cardv{
+    /* background-color: rgb(29, 86, 86); */
+    height: auto;
+    min-width: 450px;
+    width: auto;
+    /* padding: 30px; */
+    /* margin-left: 50px; */
+    /* left: 50px; */
+    /* flex: 5; */
+    
+
+}
+.viewroadmapcards{
+    /* background-color: rgb(108, 108, 40); */
+    margin-top: 70px;
+    margin-left: -140px;
+    width: 1100px;
+    height: 500px;
+}
+
+.colv{
+    justify-content: space-between;
+    width: 500px;
+    margin-left: 20px;
+}
+
+.topv{
+    height: 430px;
+    border: 2px solid aquamarine;
+}
+
+.topv:hover{
+    height: 500px;
+    transition: transform 0.3s ease;
+    /* overflow: hidden; Hide overflow content */
+    transform: scale(1.2);
+}

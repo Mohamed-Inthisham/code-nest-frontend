@@ -1,12 +1,6 @@
 import React from 'react'
 import MentorSidebar from '../components/MentorSidebar'
 import '../css/ViewRoadmap.css'
-import image1 from '../images/myLearning1.png'
-import image2 from '../images/myLearning2.png'
-import image3 from '../images/myLearning3.jpeg'
-import image4 from '../images/myLearning4.png'
-import image5 from '../images/myLearning5.png'
-import image6 from '../images/myLearning6.png'
 import javaRoadMap from '../images/javaRoadMap.png'
 import netRoadmap from '../images/netRoadmap1.png'
 

@@ -27,4 +27,16 @@
       width: 100%; 
     }
   }
+  .edit-btn{
+    color: white;
+  }
+.edit-btn:hover{
+  color: white;
+}
+.add-btn{
+  color: white;
+}
+.add-btn:hover{
+  color: white;
   
+}

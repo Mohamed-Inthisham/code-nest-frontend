@@ -15,7 +15,7 @@ export default function ManageQuiz() {
 
                    <h1 className='text-one'>Manage Quizzes</h1>
                    
-                   <button type="button" class="btn btn-primary btn1"><h1 ><a className='courseStyle' href='/addQuiz'>Add Courses</a></h1></button>
+                   <button type="button" class="btn btn-primary btn1"><a className='add-btn' href='/addQuiz'>Add Quiz</a></button>
                    </div>
                    
 
@@ -41,7 +41,7 @@ export default function ManageQuiz() {
                                     <label class="form-check-label" for="inlineRadio1">iv. car "Volvo"= String;</label>
                                 </div> 
 
-                                <button type="button" class="btn btn-info btn-edit">Edit</button>
+                                <button type="button" class="btn btn-info btn-edit"><a className='edit-btn' href='/editquiz'>Edit</a></button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                
                

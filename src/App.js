@@ -23,6 +23,9 @@ import ManageResourses from "./pages/ManageResourses";
 import AddResourse from "./pages/AddResourse";
 import EditQuiz from "./pages/EditQuiz";
 
+import EditQuizHome from "./pages/EditQuizHome";
+import ViewQuizBody from "./pages/ViewQuizBody";
+
 function App() {
   return (
     <div>
@@ -50,6 +53,10 @@ function App() {
           <Route path="/manageResourses" element={<ManageResourses />}></Route>
           <Route path="/addResourse" element={<AddResourse />}></Route>
           <Route path="/editQuiz" element={<EditQuiz />}></Route>
+
+
+          <Route path="/editQuizHome" element={<EditQuizHome />}></Route>
+          <Route path="/viewQuizBody" element={<ViewQuizBody />}></Route>
 
         </Routes>
       </Router>

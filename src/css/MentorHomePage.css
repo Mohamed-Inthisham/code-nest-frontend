@@ -3,22 +3,38 @@
     justify-content: space-around; /* Adjust as per your requirement */
     align-items: center; /* Adjust as per your requirement */
     height: 400px;
-    width: 70%;
+    width: 20%;
+    min-width: 1200px;
     background-color:rgb(41, 150, 213);
-    margin-top: 10%;
-    margin-left: 15%;
+    margin-top: 8%;
+    margin-left: 11%;
   }
   
   .namev {
     flex: 1;
     max-width: 100%;  /*Adjust as per your requirement */
     padding: 40px; /* Adjust as per your requirement */
-    font-size: 24px; /* Adjust as per your requirement */
+    font-size: 22px; /* Adjust as per your requirement */
   }
 
-  .cardv {
+  /* .cardv {
     background-color:azure;
-    height: 200px;
+    height: 20px;
+    max-width: 30px;
+    left: -80px;
+  } */
+
+  .mainv{
+    background-color: rgb(41, 150, 213);
+    width: 100px;
+  }
+
+  .card-bodyv{
+    width: 365px;
+    background-color: azure;
+    margin-top: 30px;
+    margin-left: -133px;
+    padding-left: 30px;
   }
 
   .bx{

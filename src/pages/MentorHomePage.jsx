@@ -49,10 +49,10 @@ const MentorHomePage = () => {
   {/* Layout wrapper */}
   
             {/* Icon container */}
-            <div className="buttonv" id="icons-container">
-              <div className="card cardv icon-card cursor-pointer text-center mb-4 mx-2">
-                <div className=''>
-                <div className="card-body">
+            <div className="buttonv" id="icons-containerv">
+              <div className="card icon-card cursor-pointer text-center mb-4 mx-2">
+                <div className='mainv'>
+                <div className="card-body card-bodyv">
                   <i className="bx bxs-book mb-2" />
                   <p className="icon-name namev text-capitalize text-truncate cursor-pointer mb-0">
                     Resourses
@@ -60,9 +60,9 @@ const MentorHomePage = () => {
                 </div>
                 </div>
               </div>
-              <div className="card cardv icon-card cursor-pointer text-center mb-4 mx-2">
-              <div className=''>
-                <div className="card-body">
+              <div className="card  icon-card cursor-pointer text-center mb-4 mx-2">
+              <div className='mainv'>
+                <div className="card-body card-bodyv">
                   <i className="bx bxs-conversation mb-2" />
                   <p className="icon-name namev text-capitalize text-truncate cursor-pointer mb-0">
                     Discuss
@@ -70,9 +70,9 @@ const MentorHomePage = () => {
                 </div>
                 </div>
               </div>
-              <div className="card cardv icon-card cursor-pointer text-center mb-4 mx-2">
-              <div className=''>
-                <div className="card-body">
+              <div className="card icon-card cursor-pointer text-center mb-4 mx-2">
+              <div className='mainv'>
+                <div className="card-body card-bodyv">
                   <i className="bx bxl-microsoft-teams mb-2" />
                   <p className="icon-name namev text-capitalize text-truncate cursor-pointer mb-0">
                     Live Mentor Requests

@@ -21,7 +21,7 @@ function ViewRoadmap() {
                     <div className="card cardv">
                       <img className="card-img-top topv" src={javaRoadMap} alt="Card image cap" />
                       <div className="card-body">
-                        <h3 className="card-title">JAVA</h3>
+                        <h3 className="card-title">JAVA Road Map</h3>
                         <h6 className="card-title"> From basics to advanced concepts, covering OOP, data structures, frameworks, and application development for mastering Java programming.</h6>
                         <h6 className="card-title">Mentor: K.L Santhush</h6>
                         
@@ -33,7 +33,7 @@ function ViewRoadmap() {
                     <div className="card cardv">
                       <img className="card-img-top topv" src={netRoadmap} alt="Card image cap" />
                       <div className="card-body">
-                        <h3 className="card-title">.NET</h3>
+                        <h3 className="card-title">.NET Road Map</h3>
                         <h6 className="card-title">From basics to advanced concepts, covering frameworks like ASP.NET, WinForms, and Xamarin for versatile application development.</h6>
                         <h6 className="card-title">Mentor: A.H Divya</h6>
                         

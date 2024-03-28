@@ -22,6 +22,8 @@ import AddQuiz from "./pages/AddQuiz";
 import ManageResourses from "./pages/ManageResourses";
 import AddResourse from "./pages/AddResourse";
 import EditQuiz from "./pages/EditQuiz";
+import ManageRoadmaps from "./pages/ManageRoadmaps";
+import AddRoadmap from "./pages/AddRoadmap";
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
           <Route path="/manageResourses" element={<ManageResourses />}></Route>
           <Route path="/addResourse" element={<AddResourse />}></Route>
           <Route path="/editQuiz" element={<EditQuiz />}></Route>
+          <Route path="/manageRoadmaps" element={<ManageRoadmaps />}></Route>
+          <Route path="/addRoadmap" element={<AddRoadmap />}></Route>
 
         </Routes>
       </Router>

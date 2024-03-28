@@ -25,6 +25,9 @@ import EditQuiz from "./pages/EditQuiz";
 import ManageRoadmaps from "./pages/ManageRoadmaps";
 import AddRoadmap from "./pages/AddRoadmap";
 
+import EditQuizHome from "./pages/EditQuizHome";
+import ViewQuizBody from "./pages/ViewQuizBody";
+
 function App() {
   return (
     <div>
@@ -54,6 +57,10 @@ function App() {
           <Route path="/editQuiz" element={<EditQuiz />}></Route>
           <Route path="/manageRoadmaps" element={<ManageRoadmaps />}></Route>
           <Route path="/addRoadmap" element={<AddRoadmap />}></Route>
+
+
+          <Route path="/editQuizHome" element={<EditQuizHome />}></Route>
+          <Route path="/viewQuizBody" element={<ViewQuizBody />}></Route>
 
         </Routes>
       </Router>

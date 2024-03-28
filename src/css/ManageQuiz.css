@@ -9,7 +9,7 @@
     
   }
   .main{
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   .btn1{
@@ -19,7 +19,7 @@
   .card-content.main {
     width: calc(50% - 10px);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin-left: 15%;
+    margin-left: 25%;
   }
   
   @media (max-width: 768px) {

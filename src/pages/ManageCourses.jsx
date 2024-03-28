@@ -1,6 +1,7 @@
 import React from 'react'
 import CompanySidebar from '../components/CompanySidebar'
 import '../css/ManageCourses.css'
+import EditCourses from './EditCourses'
 
 function ManageCourses() {
   return (
@@ -39,9 +40,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                       </tr>
@@ -56,9 +55,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                         
@@ -75,9 +72,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                         
@@ -93,9 +88,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                                                 
@@ -112,9 +105,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                       </tr>
@@ -130,9 +121,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                         
@@ -149,9 +138,7 @@ function ManageCourses() {
                             <button type="button" class="managecoursebtn1" >
                               Delete
                             </button>
-                            <button type="button" class="managecoursebtn2" >
-                              Edit
-                            </button>
+                            <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
                              </div>
                         </td>
                       </tr>

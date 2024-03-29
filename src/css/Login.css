@@ -15,12 +15,13 @@
 
   .cardv-login{
     background-color: rgb(255, 255, 255, 0.8);
-    margin-top: -20px;
-    margin-left: 355px;
-    width: 450px;
-    min-height: 485px;
+    margin-top: -72px;
+    margin-left: 705px;
+    width: 750px;
+    border-radius: 20px;
+    min-height: 610px;
     /* Optionally set a maximum width to avoid excessively wide cards */
-    max-height: 590px;
+    max-height: 570px;
     /* Optionally set a width to accommodate shorter content better */
     height: auto;
     justify-content: center; /* Horizontal centering */
@@ -43,7 +44,7 @@
     transform: translate(-50%, -50%);
     width: 75%;
     height: 550px;
-    background: url(../images/login.jpg);
+    background: url(../images/students.jpg);
     background-size: cover;
     background-position: center;
     margin-top: -100px;
@@ -53,4 +54,11 @@
     width: 450px;
   }
 
-  
+  .headingv{
+    font-size: 35px;
+    margin-left: 50px;
+    color: rgb(22, 134, 226);
+    text-decoration: wavy;
+    font-weight: bolder;
+    background-color: transparent;
+  }

@@ -80,7 +80,7 @@ function Courses() {
                           and much more. No coding experience is required, and you can learn in
                           just 5 minutes a day!
                         </p>
-                        <a href="javascript:void(0)" className="btn btn-primary">Add Course</a>
+                        <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ function Courses() {
                           solve different coding challenges. Python for Beginners requires no
                           prior programming experience, so let's dive right in!
                         </p>
-                        <a href="javascript:void(0)" className="btn btn-primary">Add Course</a>
+                        <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
                       </div>
                     </div>
                   </div>
@@ -116,7 +116,7 @@ function Courses() {
                           function. You don't need any previous coding experience for this
                           course, so dive right in!
                         </p>
-                        <a href="javascript:void(0)" className="btn btn-primary">Add Course</a>
+                        <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
                       </div>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ function Courses() {
                           bite-size lessons that take just 5 minutes. With plenty of practice
                           exercises, it's sure to make you a more confident C# programmer!
                         </p>
-                        <a href="javascript:void(0)" className="btn btn-primary">Add Course</a>
+                        <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
                       </div>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ function Courses() {
                           experience to do this course. We'll explain everything in short,
                           clear, beginner-friendly language.
                         </p>
-                        <a href="javascript:void(0)" className="btn btn-primary">Add Course</a>
+                        <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
                       </div>
                     </div>
                   </div>
@@ -164,7 +164,7 @@ function Courses() {
                           online? You'll be able to answer these questions and more by the end
                           of this course.
                         </p>
-                        <a href="javascript:void(0)" className="btn btn-primary">Add Course</a>
+                        <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
                       </div>
                     </div>
                   </div>

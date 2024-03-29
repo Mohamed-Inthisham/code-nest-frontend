@@ -7,6 +7,8 @@ const InternshipReqForm = () => {
     email: '',
     phoneNumber: '',
   });
+  const [resumeFile, setResumeFile] = useState(null);
+
 
   const [errors, setErrors] = useState({});
 
@@ -34,8 +36,14 @@ const InternshipReqForm = () => {
 
     if (!formData.phoneNumber.trim()) {
       validationErrors.phoneNumber = 'Phone number is required';
-    } else if (formData.phoneNumber.length < 10) {
+    } else if (!/^\d+$/.test(formData.phoneNumber)) {
+      validationErrors.phoneNumber = 'Phone number must contain only numbers';
+    }  else if (formData.phoneNumber.length < 10) {
       validationErrors.phoneNumber = 'Phone number is not valid';
+    }
+
+    if (!resumeFile) {
+      validationErrors.resume = 'Please upload your resume';
     }
 
     setErrors(validationErrors);
@@ -168,7 +176,10 @@ const InternshipReqForm = () => {
                           type="file"
                           className="form-control"
                           id="basic-default-file"
+                          onChange={(e) => setResumeFile(e.target.files[0])}
                         />
+                        {errors.resume && <div className="error-msg">{errors.resume}</div>}
+
                       </div>
 
                       <button type="submit" className="btn btn-primary">Submit</button>

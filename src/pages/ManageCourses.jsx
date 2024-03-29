@@ -41,6 +41,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                       </tr>
@@ -56,6 +57,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                         
@@ -73,6 +75,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                         
@@ -89,6 +92,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                                                 
@@ -106,6 +110,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                       </tr>
@@ -122,6 +127,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                         
@@ -139,6 +145,7 @@ function ManageCourses() {
                               Delete
                             </button>
                             <button type="button" class="managecoursebtn2" ><a href='/editCourses' className='uu'>Edit</a></button>
+                            <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
                              </div>
                         </td>
                       </tr>

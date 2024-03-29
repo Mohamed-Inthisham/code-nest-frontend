@@ -30,6 +30,7 @@ import ViewQuizBody from "./pages/ViewQuizBody";
 import EditCourses from "./pages/EditCourses";
 import ViewResourses from "./pages/ViewResourses";
 import InternInformation from "./pages/InternInformation";
+import AddContent from "./pages/AddContent";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
           <Route path="/editCourses" element={<EditCourses />}></Route>
           <Route path="/viewResourses" element={<ViewResourses />}></Route>
           <Route path="/internInformation" element={<InternInformation />}></Route>
+          <Route path="/addContent" element={<AddContent />}></Route>
 
         </Routes>
       </Router>

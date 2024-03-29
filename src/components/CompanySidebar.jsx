@@ -42,7 +42,7 @@ function CompanySidebar() {
                             </li>
 
                             <li className="menu-item active open">
-                                <a href="javascript:void(0);" className="menu-link ">
+                                <a href="javascript:void(0);" className="menu-link menu-toggle">
                                 
                                 <div data-i18n="Layouts">Quizzes</div>
                                 </a>
@@ -61,8 +61,7 @@ function CompanySidebar() {
                             </li>
 
                             <li className="menu-item active ">
-                                <a href="javascript:void(0);" className="menu-link menu-toggle">
-                                
+                                <a href="/internRequests" className="menu-link">
                                 <div data-i18n="Layouts">Intern</div>
                                 </a>
                                 </li>

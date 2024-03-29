@@ -16,7 +16,7 @@ function ViewCourses() {
         <CompanySidebar />
 
         
-      <div className="text-one coursetitle"> View Courses </div>
+        <h1 className='text-one coursetitle'>View Courses</h1>
 
       <br></br>
 

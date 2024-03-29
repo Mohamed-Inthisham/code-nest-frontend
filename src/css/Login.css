@@ -15,13 +15,13 @@
 
   .cardv-login{
     background-color: rgb(255, 255, 255, 0.8);
-    margin-top: -80px;
+    margin-top: -72px;
     margin-left: 705px;
     width: 750px;
     border-radius: 20px;
     min-height: 610px;
     /* Optionally set a maximum width to avoid excessively wide cards */
-    max-height: 590px;
+    max-height: 570px;
     /* Optionally set a width to accommodate shorter content better */
     height: auto;
     justify-content: center; /* Horizontal centering */

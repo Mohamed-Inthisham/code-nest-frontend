@@ -51,7 +51,7 @@ export default function CourseContent() {
           </li>
 
           <li className="menu-item active open">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
+            <a href="/CourseContent" className="menu-link menu-toggle">
               
               <div data-i18n="Layouts">Java Variables</div>
             </a>
@@ -129,13 +129,18 @@ export default function CourseContent() {
                   </div> 
 
                   <div className="answer1">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
                     <label class="form-check-label" for="inlineRadio1">String Volvo= "car";</label>
                   </div> 
 
                   <div className="answer1">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"/>
                     <label class="form-check-label" for="inlineRadio1">"Volvo" car = String;</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"/>
+                    <label class="form-check-label" for="inlineRadio1">car String = "Volvo";</label>
                   </div> 
 
                <button type="button" id="btnn" class="btn btn-info">Submit</button>
@@ -149,18 +154,23 @@ export default function CourseContent() {
             
               <p class="card-text">2.Create a variable named maxSpeed and assign the value 120 to it.</p>
                 <div className="answer1">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"/>
                     <label class="form-check-label" for="inlineRadio1">120 =Int maxSpeed;</label>
                   </div> 
 
                   <div className="answer1">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"/>
                     <label class="form-check-label" for="inlineRadio1">Int maxSpeed=120;</label>
                   </div> 
 
                   <div className="answer1">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"/>
                     <label class="form-check-label" for="inlineRadio1">maxSpeed Int = 120</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option4"/>
+                    <label class="form-check-label" for="inlineRadio1">maxSpeed 120 = Int</label>
                   </div> 
 
                <button type="button" id="btnn" class="btn btn-info">Submit</button>

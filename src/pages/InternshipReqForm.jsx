@@ -1,13 +1,71 @@
-import React from 'react'
-import '../css/InternshipReqForm.css'
+import React, { useState } from 'react';
+import '../css/InternshipReqForm.css';
+import axiosInstance from '../api/axios';
 
-export default function InternshipReqForm() {
+const InternshipReqForm = () => {
+  const [formData, setFormData] = useState({
+    fullname: '',
+    email: '',
+    phoneNumber: '',
+    cv: null // For file
+  });
+  const [resumeFile, setResumeFile] = useState(null);
+
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleFileChange = (e) => {
+    setFormData({
+      ...formData,
+      cv: e.target.files[0] // Store file object
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('fullName', formData.fullname);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('contact', formData.phoneNumber);
+      formDataToSend.append('files', formData.cv);
+
+       // Send form data to server with correct content type
+       const response = await axiosInstance.post('internship', formDataToSend, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
+      // Handle response here
+      console.log(response.data); // Log the response data
+
+      // Clear the form after successful submission
+      setFormData({
+        fullname: '',
+        email: '',
+        phoneNumber: '',
+        cv: null
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error if needed
+    }
+  };
+
   
+
   return (
     <div>
-     
-<>
-  
 
 <div className="layout-wrapper layout-content-navbar">
     <div className="layout-container">
@@ -66,68 +124,88 @@ export default function InternshipReqForm() {
       
       </ul>
   </aside>
- 
 
-    <div className="layout-page-home">
+      <div className="layout-wrapper layout-content-navbar">
+        <div className="layout-container">
+          <div className="layout-page-home">
+            <div className="row-con">
+              <div className="col-lg1">
+                <div className="card-form ">
+                  <div className="card-header d-flex justify-content-between align-items-center">
+                    <h3 className="req-to"><b>Request to Internship</b></h3>
+                  </div>
+                  <div className="card-body-1">
+                  <form onSubmit={handleSubmit}>
+                      <div className="text-feild">
+                        <label className="form-label" htmlFor="basic-default-fullname">Full Name</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="basic-default-fullname"
+                          placeholder="Enter full Name"
+                          name="fullname"
+                          value={formData.fullname}
+                          onChange={handleChange}
+                        />
+                        {errors.fullname && <span className="error-msg">{errors.fullname}</span>}
+                      </div>
 
-      <div class="row-con">
-                <div class="col-lg1">
-                  <div class="card-form ">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <h3 className='req-to'><b>Request to Internship</b></h3>
-                    </div>
-                    <div class="card-body-1">
-                      <form>
-                        <div class="text-feild">
-                          <label class="form-label" for="basic-default-fullname">Full Name</label>
-                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="Enter full Name" />
-                        </div>
-              
-                        <div class="text-feild">
-                          <label class="form-label" for="basic-default-email">Email</label>
-                          <div class="input-group input-group-merge">
-                            <input
-                              type="email"
-                              id="basic-default-email"
-                              class="form-control" placeholder="Enter your email" /> 
-                          </div>
-                          
-                        </div>
-                        <div class="text-feild">
-                          <label class="form-label" for="basic-default-phone">Phone No</label>
+                      <div className="text-feild">
+                        <label className="form-label" htmlFor="basic-default-email">Email</label>
+                        <div className="input-group input-group-merge">
                           <input
                             type="text"
-                            id="basic-default-phone"
-                            class="form-control phone"
-                            placeholder="Enter Phone number"/>
+                            id="basic-default-email"
+                            className="form-control"
+                            placeholder="Enter your email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                          />
+                          {errors.email && <span className="error-msg">{errors.email}</span>}
                         </div>
-                        <div class="text-feild">
-                              <label class="form-label" for="basic-default-file">Upload Your CV/Resume</label>
-                              <input type="file" class="form-control" id="basic-default-file"/>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        
-                      </form>
-                    </div>
+                      </div>
+
+                      <div className="text-feild">
+                        <label className="form-label" htmlFor="basic-default-phone">Phone No</label>
+                        <input
+                          type="text"
+                          id="basic-default-phone"
+                          className="form-control phone"
+                          placeholder="Enter Phone number"
+                          name="phoneNumber"
+                          value={formData.phoneNumber}
+                          onChange={handleChange}
+                        />
+                        {errors.phoneNumber && <span className="error-msg">{errors.phoneNumber}</span>}
+                      </div>
+
+                      <div className="text-feild">
+                        <label className="form-label" htmlFor="basic-default-file">Upload Your CV/Resume</label>
+                        <input
+                          type="file"
+                          className="form-control"
+                          accept="application/pdf"
+                          id="basic-default-file"
+                          onChange={handleFileChange}
+                        />
+                        {errors.resume && <div className="error-msg">{errors.resume}</div>}
+
+                      </div>
+
+                      <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
                   </div>
                 </div>
-              
               </div>
-       
-        
+            </div>
+          </div>
+        </div>
       </div>
-      
     </div>
-    
-    
-  </div>
-  
-  
-  
- </>
+    </div>
+    </div>
+  );
+};
 
-
-</div>
-  )
-}
+export default InternshipReqForm;

@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import '../css/InternRequest.css'
 
-function InternRequest() {
+const InternRequest = () => {
+
   return (
     <>
       <div className="card " id="intern-list">

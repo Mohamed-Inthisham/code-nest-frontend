@@ -21,7 +21,7 @@ function Courses() {
                   <div className="card h-100">
                     <img className="card-img-top" src={image8} alt="Card image cap" />
                     <div className="card-body">
-                      <h5 className="card-title">Java Intermediate</h5>
+                      <h5 className="card-title"><a className='java-course-btn' href='/coursecontent'>Java Basics</a></h5>
                       <p className="card-text">
                         Time to get serious and really see what Java (and you!) can do!
                         In this course you’ll learn some concepts related to

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import '../css/InternshipReqForm.css';
+import axiosInstance from '../api/axios';
 
 const InternshipReqForm = () => {
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
     phoneNumber: '',
+    cv: null // For file
   });
   const [resumeFile, setResumeFile] = useState(null);
 
@@ -20,39 +22,47 @@ const InternshipReqForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleFileChange = (e) => {
+    setFormData({
+      ...formData,
+      cv: e.target.files[0] // Store file object
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = {};
 
-    if (!formData.fullname.trim()) {
-      validationErrors.fullname = 'Full name is required';
-    }
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('fullName', formData.fullname);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('contact', formData.phoneNumber);
+      formDataToSend.append('files', formData.cv);
 
-    if (!formData.email.trim()) {
-      validationErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      validationErrors.email = 'Email is not valid';
-    }
+       // Send form data to server with correct content type
+       const response = await axiosInstance.post('internship', formDataToSend, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
 
-    if (!formData.phoneNumber.trim()) {
-      validationErrors.phoneNumber = 'Phone number is required';
-    } else if (!/^\d+$/.test(formData.phoneNumber)) {
-      validationErrors.phoneNumber = 'Phone number must contain only numbers';
-    }  else if (formData.phoneNumber.length < 10) {
-      validationErrors.phoneNumber = 'Phone number is not valid';
-    }
+      // Handle response here
+      console.log(response.data); // Log the response data
 
-    if (!resumeFile) {
-      validationErrors.resume = 'Please upload your resume';
-    }
-
-    setErrors(validationErrors);
-
-    if (Object.keys(validationErrors).length === 0) {
-      alert('Submitted Successfully');
-      // You can add code here to submit the form to your backend
+      // Clear the form after successful submission
+      setFormData({
+        fullname: '',
+        email: '',
+        phoneNumber: '',
+        cv: null
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error if needed
     }
   };
+
+  
 
   return (
     <div>
@@ -125,7 +135,7 @@ const InternshipReqForm = () => {
                     <h3 className="req-to"><b>Request to Internship</b></h3>
                   </div>
                   <div className="card-body-1">
-                    <form onSubmit={handleSubmit}>
+                  <form onSubmit={handleSubmit}>
                       <div className="text-feild">
                         <label className="form-label" htmlFor="basic-default-fullname">Full Name</label>
                         <input
@@ -175,15 +185,15 @@ const InternshipReqForm = () => {
                         <input
                           type="file"
                           className="form-control"
+                          accept="application/pdf"
                           id="basic-default-file"
-                          onChange={(e) => setResumeFile(e.target.files[0])}
+                          onChange={handleFileChange}
                         />
                         {errors.resume && <div className="error-msg">{errors.resume}</div>}
 
                       </div>
 
                       <button type="submit" className="btn btn-primary">Submit</button>
-
                     </form>
                   </div>
                 </div>

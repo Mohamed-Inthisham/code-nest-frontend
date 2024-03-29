@@ -51,7 +51,7 @@ export default function CourseContent() {
           </li>
 
           <li className="menu-item active open">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
+            <a href="/CourseContent" className="menu-link menu-toggle">
               
               <div data-i18n="Layouts">Java Variables</div>
             </a>

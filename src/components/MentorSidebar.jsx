@@ -34,7 +34,7 @@ function MentorSidebar() {
                                     </a>
                                 </li>
                                 <li className="menu-item ">
-                                    <a href="/viewRoadmap" className="menu-link">
+                                    <a href="/manageRoadmaps" className="menu-link">
                                     <div data-i18n="Without navbar">Manage Roadmap</div>
                                     </a>
                                 </li>

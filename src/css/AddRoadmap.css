@@ -1,0 +1,48 @@
+.add-roadmap{
+    /* background-color: aquamarine; */
+    text-align: left;
+    margin-top: 30px;
+}
+.main-roadmap{
+    background-color: #ddf0fd;
+    width: 600px;
+    height: 550px;
+    justify-content: center;
+    padding: 40px;
+    margin-left: 44%;
+    margin-bottom: -30px;
+}
+
+.text-field-roadmap{
+    /* background-color: rgb(153, 139, 167); */
+    padding: 8px;
+    width: 500px;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+
+.card-body-roadmap{
+    /* background-color: rgb(171, 103, 13); */
+    justify-content: center;
+    padding: 10px;
+}
+
+.btn-roadmap{
+    margin-left: 200px;
+    text-align: center;
+    width: 80px;
+    margin-top: 30px;
+    background-color: #abdcfc;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10%; /* Makes the button round */
+    border: none; /* Removes default button border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-roadmap:hover{
+    background-color: rgb(32, 158, 216);
+}

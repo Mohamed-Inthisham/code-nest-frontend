@@ -9,6 +9,8 @@ const InternshipReqForm = () => {
     phoneNumber: '',
     cv: null // For file
   });
+  const [resumeFile, setResumeFile] = useState(null);
+
 
   const [errors, setErrors] = useState({});
 
@@ -187,6 +189,8 @@ const InternshipReqForm = () => {
                           id="basic-default-file"
                           onChange={handleFileChange}
                         />
+                        {errors.resume && <div className="error-msg">{errors.resume}</div>}
+
                       </div>
 
                       <button type="submit" className="btn btn-primary">Submit</button>

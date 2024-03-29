@@ -1,11 +1,21 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import '../css/InternRequest.css'
+import CompanySidebar from '../components/CompanySidebar'
 
 const InternRequest = () => {
 
   return (
+
+
+
     <>
+        <div>
+          <div class="d-inline-flex p-2 bd-highlight">
+
+              <CompanySidebar/>
+
+              
       <div className="card " id="intern-list">
         <h5 className="card-header" id="emphead">
           Internship Request List
@@ -84,6 +94,8 @@ const InternRequest = () => {
           </table>
         </div>
       </div>
+      </div>
+    </div>
     </>
   );
 }

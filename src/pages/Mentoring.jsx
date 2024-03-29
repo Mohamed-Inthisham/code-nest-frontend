@@ -12,7 +12,6 @@ function Mentoring() {
           <div className="demo-inline-spacing bn-main">
             <button type="button" className="btn btn-secondary bn-mentoring-main"> <Link to ="/mentoring"><h6 className='bn-word-main'>Roadmap</h6></Link></button>
             <button type="button" className="btn btn- bn-mentoring"><Link to ="/resources"><h6 className='bn-word'>Resources</h6></Link></button>
-            <button type="button" className="btn btn- bn-mentoring" disabled=""><Link to ="/discuss"><h6 className='bn-word'>Discuss</h6></Link></button>
           </div>
 
           <div classname="roadmap-one">

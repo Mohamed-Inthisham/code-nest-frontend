@@ -27,6 +27,7 @@ import AddRoadmap from "./pages/AddRoadmap";
 
 import EditQuizHome from "./pages/EditQuizHome";
 import ViewQuizBody from "./pages/ViewQuizBody";
+import EditCourses from "./pages/EditCourses";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
 
           <Route path="/editQuizHome" element={<EditQuizHome />}></Route>
           <Route path="/viewQuizBody" element={<ViewQuizBody />}></Route>
+          <Route path="/editCourses" element={<EditCourses />}></Route>
 
         </Routes>
       </Router>

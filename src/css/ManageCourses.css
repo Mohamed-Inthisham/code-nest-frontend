@@ -36,12 +36,15 @@
     display: flex;
   justify-content: flex-end;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  padding-right: 20px;
-  margin-top: -340px;
+  padding: 30px 20px 40px 20px;
+  margin-top: 80px;
+  margin-right: 100px;
+  height: 60px;
+
 }
 
 .rty{
@@ -49,6 +52,7 @@
     margin-top: 10px;
     background-color: rgb(17, 47, 107);
     border-radius: 5px;
+    display: flex;
 }
 
 .courseStyle{
@@ -57,9 +61,14 @@
     font-size: 20px;
     padding-left: 5px;
     padding-right: 5px;
+    display: flex;
 }
 
 .courseStyle:hover {
+    color: white;
+}
+
+.uu{
     color: white;
 }
   

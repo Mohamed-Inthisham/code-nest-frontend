@@ -9,9 +9,9 @@ const Register = () => {
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
-  <title>
+  {/* <title>
     Register Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro
-  </title>
+  </title> */}
   <meta name="description" content="" />
   {/* Favicon */}
   <link
@@ -54,6 +54,7 @@ const Register = () => {
   <div className="container-xxlv">
     <div className="authentication-wrapperv authentication-basic container-p-y">
       <div className="authentication-innerv">
+        <div className='headingv'>Code Nest</div>
         {/* Register Card */}
         <div className="card cardv-reg">
           <div className="card-body">

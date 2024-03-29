@@ -54,8 +54,8 @@ const Login = () => {
   <div className="container-xxlv">
     <div className="authentication-wrapperv authentication-basic container-p-y">
       <div className="authentication-innerv">
-        <div><br></br>
-          <br></br>
+        <div className='headingv'>Code Nest<br></br>
+          {/* <br></br> */}
         </div>
         {/* Register */}
         <div className="card cardv-login">

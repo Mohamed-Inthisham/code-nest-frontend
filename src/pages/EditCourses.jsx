@@ -1,8 +1,7 @@
 import React from 'react'
 import CompanySidebar from '../components/CompanySidebar'
-import '../css/AddCourses.css'
 
-function AddCourses() {
+function EditCourses() {
   return (
     <div >
       <div className="layout-wrapper layout-content-navbar">
@@ -11,7 +10,7 @@ function AddCourses() {
               
 
               <div>
-                  <h1 className='text-one coursetitle'>Add Courses</h1>
+                  <h1 className='text-one coursetitle'>Edit Courses</h1>
 
                       <div className='row'>
                           <div className='col-md-4'>
@@ -92,4 +91,4 @@ function AddCourses() {
   )
 }
 
-export default AddCourses
+export default EditCourses

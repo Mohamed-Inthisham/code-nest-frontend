@@ -17,7 +17,7 @@ function Courses() {
         <br></br>
 
               <div className="row row-cols-1 row-cols-md-3 g-4 mb-5 my-learning-test">
-                <div className="col">
+                <div className="col ">
                   <div className="card h-100">
                     <img className="card-img-top" src={image8} alt="Card image cap" />
                     <div className="card-body">
@@ -31,7 +31,7 @@ function Courses() {
                     </div>
                   </div>
                 </div>
-                <div className="col">
+                <div className="col ">
                   <div className="card h-100">
                     <img className="card-img-top" src={image9} alt="Card image cap" />
                     <div className="card-body">
@@ -46,7 +46,7 @@ function Courses() {
                     </div>
                   </div>
                 </div>
-                <div className="col">
+                <div className="col ">
                   <div className="card h-100">
                     <img className="card-img-top" src={image7} alt="Card image cap" />
                     <div className="card-body">
@@ -69,7 +69,7 @@ function Courses() {
       <br></br>
 
             <div className="row row-cols-1 row-cols-md-3 g-4 mb-5">
-                  <div className="col">
+                  <div className="col trans-test">
                     <div className="card h-100">
                       <img className="card-img-top" src={image5} alt="Card image cap" />
                       <div className="card-body">
@@ -83,7 +83,7 @@ function Courses() {
                       </div>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col trans-test">
                     <div className="card h-100">
                       <img className="card-img-top" src={image4} alt="Card image cap" />
                       <div className="card-body">
@@ -99,7 +99,7 @@ function Courses() {
                       </div>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col trans-test">
                     <div className="card h-100">
                       <img className="card-img-top" src={image3} alt="Card image cap" />
                       <div className="card-body">
@@ -117,7 +117,7 @@ function Courses() {
                       </div>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col trans-test">
                     <div className="card h-100">
                       <img className="card-img-top" src={image1} alt="Card image cap" />
                       <div className="card-body">
@@ -131,7 +131,7 @@ function Courses() {
                       </div>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col trans-test">
                     <div className="card h-100">
                       <img className="card-img-top" src={image2} alt="Card image cap" />
                       <div className="card-body">
@@ -146,7 +146,7 @@ function Courses() {
                       </div>
                     </div>
                   </div>
-                  <div className="col">
+                  <div className="col trans-test">
                     <div className="card h-100">
                       <img className="card-img-top" src={image6} alt="Card image cap" />
                       <div className="card-body">

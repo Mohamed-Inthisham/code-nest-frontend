@@ -9,17 +9,33 @@
     margin-top: 10px;
     background-color: red;
     border-radius: 5px;
+    width: 80px;
     color: black;
+    padding-left: 10px;
 }
 
 .managecoursebtn2{
     font-size: 20px;
     margin-top: 10px;
-    background-color: rgb(168, 233, 255);;
+    background-color: rgb(168, 233, 255);
     border-radius: 5px;
     color: white;
-    width: 50px;
-    padding-left: 7px;
+    width: 80px;
+    padding-left: 20px;
+}
+
+.uu:hover{
+    color: white;
+}
+
+.managecoursebtn3{
+    font-size: 19px;
+    margin-top: 10px;
+    background-color: rgb(157, 235, 159);
+    border-radius: 5px;
+    color: white;
+    width: 127px;
+    padding-left: 10px;
 }
 
 .managecoursebtnmain button {

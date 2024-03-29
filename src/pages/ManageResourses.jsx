@@ -23,7 +23,7 @@ export default function ManageResourses() {
               <div class="card mainA">
                 <div className='topic-btn'>
                 <h5 class="card-header">Referenced Videos</h5>
-                <div><button type="button" class="btn btn-primary btn2"><a className='courseStyle' href='/addResourse'>Add Video Link</a></button></div>
+                <div><button type="button" class="btn btn-primary btn2"><a className='add-video-link' href='/addResourse'>Add Video Link</a></button></div>
                 </div>
                 <div class="table-responsive text-nowrap">
                   <table class="table">
@@ -114,7 +114,7 @@ export default function ManageResourses() {
               <div class="card mainB">
               <div className='topic-btn'>
                 <h5 class="card-header">Referenced Courses</h5>
-                <div><button type="button" class="btn btn-primary btn2"><a className='courseStyle' href='#'>Add Course Link</a></button></div>
+                <div><button type="button" class="btn btn-primary btn2"><a className='add-course-link' href='/addResourse'>Add Course Link</a></button></div>
                 </div>
                 <div class="table-responsive text-nowrap">
                   <table class="table">

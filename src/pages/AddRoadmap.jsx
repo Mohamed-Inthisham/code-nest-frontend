@@ -1,7 +1,8 @@
 import React from 'react'
 import MentorSidebar from '../components/MentorSidebar';
 import '../css/AddRoadmap.css'
-export default function AddRoadmap() {
+
+const AddRoadmap = () => {
   return (
     <div>
        <div className="layout-wrapper layout-content-navbar">
@@ -49,4 +50,6 @@ export default function AddRoadmap() {
     </div>
   )
 }
+
+export default AddRoadmap;
 

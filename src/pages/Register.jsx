@@ -58,7 +58,7 @@ const Register = () => {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      alert("Form submitted successfully");
+      alert("Registered Successfully");
       // You can add code here to submit the form to your backend
     }
   };

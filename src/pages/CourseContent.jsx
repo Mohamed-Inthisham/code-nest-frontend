@@ -92,7 +92,7 @@ export default function CourseContent() {
               <p class="card-text"><b>Create a variable called name of type String and assign it the value "John":</b></p>
                <p>String name = "John";<br />
                System.out.println(name);</p>
-               <button type="button" id="try-it-self-btn1" class="btn btn-success">Try it Yor Self</button>
+               <button type="button" id="try-it-self-btn1" class="btn btn-success"> <a href="/editor">Try it Your Self</a></button>
           </div>
         </div>
 
@@ -103,7 +103,7 @@ export default function CourseContent() {
               <p class="card-text"><b>Create a variable called myNum of type int and assign it the value 15:</b></p>
                <p>int myNum = 15;<br />
                System.out.println(myNum);</p>
-               <button type="button" id="try-it-self-btn2" class="btn btn-success">Try it Yor Self</button>
+               <button type="button" id="try-it-self-btn2" class="btn btn-success"><a href="/editor">Try it Your Self</a></button>
           </div>
         </div>
 
@@ -115,7 +115,7 @@ export default function CourseContent() {
              <p>int myNum;<br />
              myNum = 15;<br />
              System.out.println(myNum);</p>
-             <button type="button" id="try-it-self-btn3" class="btn btn-success">Try it Yor Self</button>
+             <button type="button" id="try-it-self-btn3" class="btn btn-success"><a href="/editor">Try it Your Self</a></button>
         </div>
       </div>
       

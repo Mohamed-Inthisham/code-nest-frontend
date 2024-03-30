@@ -19,12 +19,25 @@ export default function ManageResourses() {
     fetchResources();
   }, []);
 
-
   const normalizeLink = (link) => {
     if (!link.startsWith('http://') && !link.startsWith('https://')) {
       return 'http://' + link;
     }
     return link;
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axiosInstance.delete(`resources/${id}`);
+      setResources(resources.filter(resource => resource.id !== id));
+    } catch (error) {
+      console.error('Error deleting resource:', error);
+    }
+  };
+
+  const handleEdit = (id) => {
+    // Implement your edit functionality here, e.g., redirect to an edit page
+    console.log(`Editing resource with ID: ${id}`);
   };
 
   return (
@@ -68,12 +81,12 @@ export default function ManageResourses() {
                           <i className="bx bx-dots-vertical-rounded"></i>
                         </button>
                         <div className="dropdown-menu">
-                          <a className="dropdown-item" href="javascript:void(0);">
+                          <button className="dropdown-item" onClick={() => handleEdit(resource.id)}>
                             <i className="bx bx-edit-alt me-1"></i> Edit
-                          </a>
-                          <a className="dropdown-item" href="javascript:void(0);">
+                          </button>
+                          <button className="dropdown-item" onClick={() => handleDelete(resource.id)}>
                             <i className="bx bx-trash me-1"></i> Delete
-                          </a>
+                          </button>
                         </div>
                       </div>
                     </td>

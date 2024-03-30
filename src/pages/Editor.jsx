@@ -424,19 +424,20 @@ function Editor(props) {
                                 </div>
                             </div>
                             <br></br>
-                            <h1 className="mb-3"><b>Say Your Commands</b></h1>
+
+                            {/* <h1 className="mb-3"><b>Say Your Commands</b></h1>
                             <div className="main-content mb-3 p-2 border" style={{ height: '60px', cursor: 'pointer' }} onClick={() => setTextToCopy(transcript)}>
                                 {transcript}
                             </div>
                             <hr />
                             <div className="main-content mb-3 p-2 border" style={{ height: '250px', overflowY: 'auto' }}>
                                 {keywords}
-                            </div>
+                            </div> */}
 
 
                             <div>
                                 <div className="mb-4 text-center">
-                                    <div className="flex justify-center space-x-4">
+                                    {/* <div className="flex justify-center space-x-4">
                                         <button
                                             className="px-4 py-2 text-white bg-purple-600 hover:bg-purple-700 rounded-full"
                                             onClick={applyGeneratedCode}
@@ -449,9 +450,9 @@ function Editor(props) {
                                         >
                                             Clear
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
-                                <div className="btn-style text-center">
+                                {/* <div className="btn-style text-center">
                                     <div className="flex justify-center space-x-4">
                                         <button
                                             className={`px-4 py-2 text-white rounded-full ${isCopied ? 'bg-green-500 hover:bg-green-600' : 'bg-purple-600 hover:bg-purple-700'}`}
@@ -466,7 +467,7 @@ function Editor(props) {
                                             {isListening ? 'Stop Listening' : 'Start Listening'}
                                         </button>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
 

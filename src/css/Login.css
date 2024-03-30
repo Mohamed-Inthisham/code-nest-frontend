@@ -14,7 +14,7 @@
   }  */
 
   .cardv-login{
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255, 0.9);
     margin-top: -72px;
     margin-left: 705px;
     width: 750px;
@@ -37,7 +37,7 @@
     background-color: #ffffff; /* Set background color */
     height: 580px;
     border-radius: 20px; /* Adjust the border-radius to change the shape of the card */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); /* Add shadow for depth */
     position: absolute;
     /* top: 20%; */
     left: 50%;

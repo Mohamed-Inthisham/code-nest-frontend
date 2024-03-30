@@ -1,6 +1,7 @@
 .mainA{
     width: 1035px;
-    margin-left: 40px;
+    margin-left: -190px;
+    margin-top: 120px;
 }
 
 .mainB{
@@ -11,6 +12,8 @@
 }
 .btn2{
     background-color: rgb(17, 47, 107);
+    margin-top: -150px;
+    margin-left: 600px;
    
  }
 .add-video-link{

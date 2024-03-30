@@ -10,12 +10,24 @@ const AddCourses = () => {
     companyName: ''
   });
 
+  const [formErrors, setFormErrors] = useState({
+    image: '',
+    cTitle: '',
+    cDescription: '',
+    companyName: ''
+  });
+
   // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value
+    });
+    // Clear validation error once user starts typing
+    setFormErrors({
+      ...formErrors,
+      [name]: ''
     });
   };
 
@@ -25,11 +37,37 @@ const AddCourses = () => {
       ...formData,
       image: e.target.files[0]
     });
+    // Clear validation error for image once file is selected
+    setFormErrors({
+      ...formErrors,
+      image: ''
+    });
   };
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validation
+    let errors = {};
+    if (!formData.image) {
+      errors.image = 'Image is required';
+    }
+    if (!formData.cTitle.trim()) {
+      errors.cTitle = 'Course title is required';
+    }
+    if (!formData.cDescription.trim()) {
+      errors.cDescription = 'Course description is required';
+    }
+    if (!formData.companyName.trim()) {
+      errors.companyName = 'Company name is required';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
     const data = new FormData();
     data.append('image', formData.image);
     data.append('cTitle', formData.cTitle);
@@ -68,18 +106,22 @@ const AddCourses = () => {
                   <div className="text-field">
                     <label className="form-label" htmlFor="photo-upload">Upload Image:</label>
                     <input type="file" className="form-control" id="photo-upload" accept="image*" onChange={handleFileChange} />
+                    {formErrors.image && <div className="error">{formErrors.image}</div>}
                   </div>
                   <div className="text-feild">
                     <label className="form-label" htmlFor="cTitle">Course Title:</label>
                     <input type="text" className="form-control" id="cTitle" name="cTitle" value={formData.cTitle} onChange={handleChange} />
+                    {formErrors.cTitle && <div className="error">{formErrors.cTitle}</div>}
                   </div>
                   <div className="text-field">
                     <label className="form-label" htmlFor="cDescription">Description:</label>
                     <textarea className="form-control" id="cDescription" rows="4" name="cDescription" value={formData.cDescription} onChange={handleChange}></textarea>
+                    {formErrors.cDescription && <div className="error">{formErrors.cDescription}</div>}
                   </div>
                   <div className="text-field">
                     <label className="form-label" htmlFor="companyName">Company Name:</label>
                     <input type="text" className="form-control" id="companyName" name="companyName" value={formData.companyName} onChange={handleChange} />
+                    {formErrors.companyName && <div className="error">{formErrors.companyName}</div>}
                   </div>
                   <button type="submit" className="btn-roadmap">ADD</button>
                 </form>

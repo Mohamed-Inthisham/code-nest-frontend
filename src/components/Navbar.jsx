@@ -14,9 +14,9 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbar-ex-3">
             <div className="navbar-nav me-auto navlinks">
             <div className="navbar-nav me-auto navlinks">  
-              <a className="nav-item nav-link" href="/homepage">Home</a>
-              <a className="nav-item nav-link" href="/courses">Courses</a>
-              <a className="nav-item nav-link" href="/mentoring">Mentoring</a>
+              <a className="nav-item nav-link" href="/homepage" style={{ cursor: 'pointer' }}>Home</a>
+              <a className="nav-item nav-link" href="/courses" style={{ cursor: 'pointer' }}>Courses</a>
+              <a className="nav-item nav-link" href="/mentoring" style={{ cursor: 'pointer' }}>Mentoring</a>
             </div>
 
             </div>

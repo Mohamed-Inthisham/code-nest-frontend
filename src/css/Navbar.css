@@ -4,6 +4,9 @@
     gap: 70px;
     top: 15%;
 }
+.nav-link:hover{
+    background-color: rgb(1, 29, 29);
+}
 #userlogo{
     position: absolute;
     right: 3%;

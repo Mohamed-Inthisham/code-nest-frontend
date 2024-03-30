@@ -31,6 +31,7 @@ import EditCourses from "./pages/EditCourses";
 import ViewResourses from "./pages/ViewResourses";
 import InternInformation from "./pages/InternInformation";
 import AddContent from "./pages/AddContent";
+import Editor from "./pages/Editor";
 
 function App() {
   return (
@@ -69,6 +70,8 @@ function App() {
           <Route path="/viewResourses" element={<ViewResourses />}></Route>
           <Route path="/internInformation" element={<InternInformation />}></Route>
           <Route path="/addContent" element={<AddContent />}></Route>
+
+          <Route path="/editor" element={<Editor />}></Route>
 
         </Routes>
       </Router>

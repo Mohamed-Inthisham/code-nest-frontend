@@ -12,6 +12,7 @@ const InternshipReqForm = () => {
 
   const [errors, setErrors] = useState({});
 
+  const [submissionStatus, setSubmissionStatus] = useState(null); 
   const handleChange = (e) => {
     const { name, value } = e.target;
     // Basic validations
@@ -23,7 +24,8 @@ const InternshipReqForm = () => {
     } else if (name === 'phoneNumber' && !/^\d{10}$/.test(value)) {
       error = 'Phone Number must be 10 digits';
     }
-
+     
+    
     setErrors({
       ...errors,
       [name]: error,
@@ -115,9 +117,11 @@ const InternshipReqForm = () => {
         cv: null
       });
       setErrors({});
+      setSubmissionStatus('success');
     } catch (error) {
       console.error('Error submitting form:', error);
       // Handle error if needed
+      setSubmissionStatus('error');
     }
   };
 
@@ -174,6 +178,11 @@ const InternshipReqForm = () => {
                         <h3 className="req-to"><b>Request to Internship</b></h3>
                       </div>
                       <div className="card-body-1">
+                      {submissionStatus === 'success' && (
+                          <div className="alert alert-success" role="alert">
+                            Form submitted successfully!
+                          </div>
+                        )}
                         <form onSubmit={handleSubmit}>
                           <div className="text-feild">
                             <label className="form-label" htmlFor="basic-default-fullname">Full Name</label>

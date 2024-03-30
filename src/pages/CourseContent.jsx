@@ -53,7 +53,7 @@ export default function CourseContent() {
           <li className="menu-item active open">
             <a href="/CourseContent" className="menu-link menu-toggle">
               
-              <div data-i18n="Layouts">Java Variables</div>
+              <div data-i18n="Layouts" className='cursor-pointer'>Java Variables</div>
             </a>
            
           </li>

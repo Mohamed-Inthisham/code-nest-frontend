@@ -28,11 +28,11 @@ function MentorSidebar() {
                                 <div data-i18n="Layouts">Roadmap</div>
                                 </a>
                                 <ul className="menu-sub menu">
-                                <li className="menu-item item">
+                                {/* <li className="menu-item item">
                                     <a href="/viewRoadmap" className="menu-link">
                                     <div data-i18n="Without menu">View Roadmap</div>
                                     </a>
-                                </li>
+                                </li> */}
                                 <li className="menu-item ">
                                     <a href="/manageRoadmaps" className="menu-link">
                                     <div data-i18n="Without navbar">Manage Roadmap</div>
@@ -47,11 +47,11 @@ function MentorSidebar() {
                                 <div data-i18n="Layouts">Resourses</div>
                                 </a>
                                 <ul className="menu-sub">
-                                <li className="menu-item">
+                                {/* <li className="menu-item">
                                     <a href="/viewResourses" className="menu-link"> 
                                     <div data-i18n="Without menu">View Resourses</div>
                                     </a>
-                                </li>
+                                </li> */}
                                 <li className="menu-item ">
                                     <a href="/ManageResourses" className="menu-link">   
                                     <div data-i18n="Without navbar">Manage Resourses</div>

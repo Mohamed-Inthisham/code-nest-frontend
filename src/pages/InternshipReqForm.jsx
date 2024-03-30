@@ -107,9 +107,9 @@ const InternshipReqForm = () => {
           </li>
 
           <li className="menu-item">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
+            <a href="/coursecontent"  className="menu-link menu-toggle">
               
-              <div data-i18n="Layouts">Java Variables</div>
+              <div data-i18n="Layouts" className='cursor-pointer'>Java Variables</div>
             </a>
            
           </li>

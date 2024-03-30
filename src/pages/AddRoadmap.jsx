@@ -11,8 +11,25 @@ const AddRoadmap = () => {
     mentorName: ''
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // Basic validations
+    let error = '';
+    if (name === 'rmTitle' && !value.trim()) {
+      error = 'Roadmap Title is required';
+    } else if (name === 'description' && !value.trim()) {
+      error = 'Description is required';
+    } else if (name === 'mentorName' && !value.trim()) {
+      error = 'Mentor Name is required';
+    }
+
+    setErrors({
+      ...errors,
+      [name]: error
+    });
+
     setFormData({
       ...formData,
       [name]: value
@@ -28,6 +45,36 @@ const AddRoadmap = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check for empty fields
+    let formValid = true;
+    const newErrors = {};
+
+    if (!formData.rmTitle.trim()) {
+      newErrors.rmTitle = 'Roadmap Title is required';
+      formValid = false;
+    }
+
+    if (!formData.description.trim()) {
+      newErrors.description = 'Description is required';
+      formValid = false;
+    }
+
+    if (!formData.mentorName.trim()) {
+      newErrors.mentorName = 'Mentor Name is required';
+      formValid = false;
+    }
+
+    if (!formData.image) {
+      newErrors.image = 'Image is required';
+      formValid = false;
+    }
+
+    if (!formValid) {
+      setErrors(newErrors);
+      return;
+    }
+
     const data = new FormData();
     data.append('image', formData.image);
     data.append('rmTitle', formData.rmTitle);
@@ -63,18 +110,22 @@ const AddRoadmap = () => {
                   <div class="text-field-roadmap">
                     <label class="form-label" for="photo-upload">Upload Photo:</label>
                     <input type="file" class="form-control" id="photo-upload" accept="image/*" onChange={handleFileChange} />
+                    {errors.image && <span className="error-msg">{errors.image}</span>}
                   </div>
                   <div class="text-field-roadmap">
                     <label class="form-label" for="rmTitle">Roadmap Title :</label>
                     <input type="text" class="form-control" id="rmTitle" name="rmTitle" value={formData.rmTitle} onChange={handleChange} />
+                    {errors.rmTitle && <span className="error-msg">{errors.rmTitle}</span>}
                   </div>
                   <div class="text-field-roadmap">
                     <label class="form-label" for="description">Description :</label>
                     <textarea class="form-control" id="description" rows="4" name="description" value={formData.description} onChange={handleChange}></textarea>
+                    {errors.description && <span className="error-msg">{errors.description}</span>}
                   </div>
                   <div class="text-field-roadmap">
                     <label class="form-label" for="mentorName">Mentor Name :</label>
                     <input type="text" class="form-control" id="mentorName" name="mentorName" value={formData.mentorName} onChange={handleChange} />
+                    {errors.mentorName && <span className="error-msg">{errors.mentorName}</span>}
                   </div>
                   <button type="submit" class="btn-roadmap">ADD</button>
                 </form>

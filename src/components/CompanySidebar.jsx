@@ -28,11 +28,11 @@ function CompanySidebar() {
                                 <div data-i18n="Layouts">Courses</div>
                                 </a>
                                 <ul className="menu-sub menu">
-                                <li className="menu-item item">
+                                {/* <li className="menu-item item">
                                     <a href="/viewCourses" className="menu-link">
                                     <div data-i18n="Without menu">View Courses</div>
                                     </a>
-                                </li>
+                                </li> */}
                                 <li className="menu-item ">
                                     <a href="/manageCourses" className="menu-link">
                                     <div data-i18n="Without navbar">Manage Courses</div>
@@ -47,11 +47,11 @@ function CompanySidebar() {
                                 <div data-i18n="Layouts">Quizzes</div>
                                 </a>
                                 <ul className="menu-sub">
-                                <li className="menu-item">
+                                {/* <li className="menu-item">
                                     <a href="viewQuizzes" className="menu-link">
                                     <div data-i18n="Without menu">View Quizzes</div>
                                     </a>
-                                </li>
+                                </li> */}
                                 <li className="menu-item ">
                                     <a href="/ManageQuiz" className="menu-link">
                                     <div data-i18n="ManageQuiz">Manage Quizzes</div>

@@ -21,6 +21,13 @@ function Resources() {
     fetchResources();
   }, []);
 
+  const normalizeLink = (link) => {
+    if (!link.startsWith('http://') && !link.startsWith('https://')) {
+      return 'http://' + link;
+    }
+    return link;
+  };
+
   return (
     <div>
       {error && <div className="error-message">{error}</div>}
@@ -51,13 +58,13 @@ function Resources() {
             </a>
 
             {resources.map(resource => (
-              <a key={resource.id} href={resource.description} className="list-group-item list-group-item-action flex-column align-items-start">
+              <a key={resource.id} href={normalizeLink(resource.description)} className="list-group-item list-group-item-action flex-column align-items-start">
                 <div className="d-flex justify-content-between w-100">
                   <h5>{resource.resTitle}</h5>
                   <small className="text-muted">{resource.date}</small>{/* Assuming you have a 'date' field */}
                 </div>
                 {/* Assuming you want to display the URL */}
-                <p className="mb-1"><a href={resource.description}>{resource.description}</a></p>
+                <p className="mb-1"><a href={normalizeLink(resource.description)}>{resource.description}</a></p>
               </a>
             ))}
           </div>

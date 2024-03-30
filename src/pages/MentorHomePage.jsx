@@ -49,8 +49,9 @@ const MentorHomePage = () => {
   {/* Layout wrapper */}
   
             {/* Icon container */}
-            <div className="buttonv" id="icons-containerv">
+            <div className="buttonv" id="icons-containerv"> 
               <div className="card icon-card cursor-pointer text-center mb-4 mx-2">
+              <button className='btnv'><a href="/viewRoadmap">
                 <div className='mainv'>
                 <div className="card-body card-bodyv">
                   <i className="bx bxs-book mb-2" />
@@ -59,7 +60,10 @@ const MentorHomePage = () => {
                   </p>
                 </div>
                 </div>
+                </a>
+              </button>
               </div>
+              
               <div className="card  icon-card cursor-pointer text-center mb-4 mx-2">
               <div className='mainv'>
                 <div className="card-body card-bodyv">

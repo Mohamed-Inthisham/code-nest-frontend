@@ -4,12 +4,13 @@
   
   .cardv-reg{
     background-color: rgb(255, 255, 255, 0.8);
-    margin-top: -15px;
-    margin-left: 355px;
+    margin-top: -25px;
+    margin-left: 705px;
+    border-radius: 20px;
     width: 450px;
-    min-height: 485px;
+    min-height: 535px;
     /* Optionally set a maximum width to avoid excessively wide cards */
-    max-height: 590px;
+    max-height: 610px;
     /* Optionally set a width to accommodate shorter content better */
     height: auto;
     justify-content: center; /* Horizontal centering */
@@ -31,10 +32,11 @@
     transform: translate(-50%, -50%);
     width: 75%;
     height: 610px;
-    background: url(../images/login.jpg);
+    background: url(../images/students.jpg);
     background-size: cover;
     background-position: center;
     margin-top: 200px;
+    outline: auto;
   }
 
    .form-control {
@@ -44,5 +46,11 @@
     margin-top: -6px;
   }
 
-  
-  
+  .headingv{
+    font-size: 35px;
+    margin-left: 50px;
+    color: rgb(22, 134, 226);
+    text-decoration: wavy;
+    font-weight: bolder;
+    background-color: transparent;
+  }

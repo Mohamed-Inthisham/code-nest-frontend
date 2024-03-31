@@ -19,7 +19,7 @@ export default function CourseContent() {
         className="layout-menu menu-vertical menu bg-menu-theme">
         <div className="app-brand demo">
           <span className="app-brand-text demo menu-text fw-bold ms-2">
-              Java Basics
+              Java Script
           </span>
         </div>
 
@@ -29,7 +29,7 @@ export default function CourseContent() {
          <li className="menu-item">
             <a href="javascript:void(0);" className="menu-link menu-toggle">
               
-              <div data-i18n="Layouts">Java Introduction</div>
+              <div data-i18n="Layouts"> Java Script Introduction</div>
             </a>
            
           </li>
@@ -37,7 +37,7 @@ export default function CourseContent() {
           <li className="menu-item ">
             <a href="javascript:void(0);" className="menu-link menu-toggle">
               
-              <div data-i18n="Layouts">Java Output</div>
+              <div data-i18n="Layouts">Java Script Output</div>
             </a>
            
           </li>
@@ -45,7 +45,7 @@ export default function CourseContent() {
           <li className="menu-item ">
             <a href="javascript:void(0);" className="menu-link menu-toggle">
               
-              <div data-i18n="Layouts">Java Comments</div>
+              <div data-i18n="Layouts">Java Script Comments</div>
             </a>
            
           </li>
@@ -53,7 +53,7 @@ export default function CourseContent() {
           <li className="menu-item active open">
             <a href="/CourseContent" className="menu-link menu-toggle">
               
-              <div data-i18n="Layouts" className='cursor-pointer'>Java Variables</div>
+              <div data-i18n="Layouts" className='cursor-pointer'>Java Script Variables</div>
             </a>
            
           </li>
@@ -72,10 +72,10 @@ export default function CourseContent() {
 
       <div className="course-content-body">
         
-        <h1 className='topic'>Java Variables</h1>
+        <h1 className='topic'>Java Script Basics</h1>
         <h3 className='subtopic'>Variables are containers for storing data values.</h3>
      
-        <h5 className='subtopic'>In Java, there are different types of variables, for example:</h5>
+        <h5 className='subtopic'>In Java Script, there are different types of variables, for example:</h5>
        
        <ul className='ulList'>
                 <li>String - stores text, such as "Hello". String values are surrounded by double quotes</li>

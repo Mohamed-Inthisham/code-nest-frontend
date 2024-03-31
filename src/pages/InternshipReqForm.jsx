@@ -9,7 +9,6 @@ const InternshipReqForm = () => {
     phoneNumber: '',
     cv: null // For file
   });
-  const [resumeFile, setResumeFile] = useState(null);
 
   const [errors, setErrors] = useState({});
 
@@ -43,14 +42,53 @@ const InternshipReqForm = () => {
       ...formData,
       cv: e.target.files[0] // Store file object
     });
+    setErrors({
+      ...errors,
+      cv: '',
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Additional check for errors before submission
-    if (Object.values(errors).some(err => err !== '')) {
-      console.log('Form has errors. Cannot submit.');
+    let formHasErrors = false;
+    let newErrors = {};
+
+    if (!formData.fullname.trim()) {
+      newErrors = {
+        ...newErrors,
+        fullname: 'Full Name is required',
+      };
+      formHasErrors = true;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors = {
+        ...newErrors,
+        email: 'Email is not valid',
+      };
+      formHasErrors = true;
+    }
+
+    if (!/^\d{10}$/.test(formData.phoneNumber)) {
+      newErrors = {
+        ...newErrors,
+        phoneNumber: 'Phone Number must be 10 digits',
+      };
+      formHasErrors = true;
+    }
+
+    if (!formData.cv) {
+      newErrors = {
+        ...newErrors,
+        cv: 'CV/Resume is required',
+      };
+      formHasErrors = true;
+    }
+
+    if (formHasErrors) {
+      setErrors(newErrors);
       return;
     }
 
@@ -199,7 +237,7 @@ const InternshipReqForm = () => {
                               id="basic-default-file"
                               onChange={handleFileChange}
                             />
-                            {errors.resume && <div className="error-msg">{errors.resume}</div>}
+                            {errors.cv && <span className="error-msg">{errors.cv}</span>}
                           </div>
 
                           <button type="submit" className="btn btn-primary">Submit</button>

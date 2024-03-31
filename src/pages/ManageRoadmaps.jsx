@@ -33,7 +33,7 @@ function ManageRoadmaps() {
   return (
     <div className="d-inline-flex p-2 bd-highlight">
       <MentorSidebar />
-      <h3 className="text-one coursetitle">Manage Roadmaps</h3>
+      <h1 className="text-one coursetitle">Manage Roadmaps</h1>
       <div className="armv">
         <button type="button" className="btn btn-primary arm">
           <a className="roadmapStyle" href="/addRoadmap">
@@ -48,13 +48,13 @@ function ManageRoadmaps() {
               <thead>
                 <tr>
                   <th>
-                    <h5>Roadmap Name</h5>
+                    <h4>Roadmap Name</h4>
                   </th>
                   <th>
-                    <h5>Mentor</h5>
+                    <h4>Mentor</h4>
                   </th>
                   <th>
-                    <h5>Action</h5>
+                    <h4>Action</h4>
                   </th>
                 </tr>
               </thead>

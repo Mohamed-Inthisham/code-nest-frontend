@@ -123,7 +123,7 @@ const AddCourses = () => {
                     <input type="text" className="form-control" id="companyName" name="companyName" value={formData.companyName} onChange={handleChange} />
                     {formErrors.companyName && <div className="error">{formErrors.companyName}</div>}
                   </div>
-                  <button type="submit" className="btn-roadmap">ADD</button>
+                  <button type="submit" className="btn btn-primary">ADD</button>
                 </form>
               </div>
             </div>

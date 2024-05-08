@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/InternshipReqForm.css';
 import axiosInstance from '../api/axios';
+import internshipForm from '../images/intern.png'
 
 const InternshipReqForm = () => {
   const [formData, setFormData] = useState({
@@ -171,6 +172,9 @@ const InternshipReqForm = () => {
           <div className="layout-wrapper layout-content-navbar">
             <div className="layout-container">
               <div className="layout-page-home">
+              <div className="internshipForm-container">
+                  <img src={internshipForm} alt="internshipForm" className="internshipForm" />
+                  <div className="card-form">
                 <div className="row-con">
                   <div className="col-lg1">
                     <div className="card-form ">
@@ -242,6 +246,8 @@ const InternshipReqForm = () => {
 
                           <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
+                      </div>
+                      </div>
                       </div>
                     </div>
                   </div>

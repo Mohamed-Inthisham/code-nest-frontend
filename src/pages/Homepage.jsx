@@ -151,7 +151,7 @@ function Homepage() {
                 high levels of both, recall and precision.
                 We propose a new algorithm
                 and show through extensive experimentation that it can learn
-                grammars from recursive descendent parsers 
+                grammars from recursive descendent parsers. 
               </p>
             </div>
           </div>

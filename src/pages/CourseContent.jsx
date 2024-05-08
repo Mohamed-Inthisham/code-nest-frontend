@@ -70,8 +70,11 @@ export default function CourseContent() {
   </aside>
  
 
-      <div className="course-content-body">
+  <div className="course-content-body">
         
+       
+    <form>
+        <div class="card-content">
         <h1 className='topic'>Java Script Basics</h1>
         <h3 className='subtopic'>Variables are containers for storing data values.</h3>
      
@@ -84,42 +87,32 @@ export default function CourseContent() {
                 <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
                 <li>boolean - stores values with two states: true or false</li>
         </ul>
-    <form>
-        <div class="card-content">
         
-          <div class="card-body-in">
-            <h5 class="card-title1">Examples</h5>
+          <div className='example'>
+            <h5 class="example-title">Example 1</h5>
               <p class="card-text"><b>Create a variable called name of type String and assign it the value "John":</b></p>
                <p>String name = "John";<br />
                System.out.println(name);</p>
-               <button type="button" id="try-it-self-btn1" class="btn btn-success"> <a href="/editor">Try it Your Self</a></button>
-          </div>
-        </div>
-
-        <div class="card-content">
-        
-          <div class="card-body1">
-            <h5 class="card-title1">Examples</h5>
+               <h5 class="example-title">Example 2</h5>
               <p class="card-text"><b>Create a variable called myNum of type int and assign it the value 15:</b></p>
                <p>int myNum = 15;<br />
                System.out.println(myNum);</p>
-               <button type="button" id="try-it-self-btn2" class="btn btn-success"><a href="/editor">Try it Your Self</a></button>
-          </div>
-        </div>
-
-        <div class="card-content">
-        
-        <div class="card-body1">
-          <h5 class="card-title1">Examples</h5>
+               <h5 class="example-title">Example 3</h5>
             <p class="card-text"><b>You can also declare a variable without assigning the value, and assign the value later:</b></p>
              <p>int myNum;<br />
              myNum = 15;<br />
              System.out.println(myNum);</p>
-             <button type="button" id="try-it-self-btn3" class="btn btn-success"><a href="/editor">Try it Your Self</a></button>
-        </div>
-      </div>
-      
-        <div class="card-content">
+
+             <button type='button' className='btn btn-primary'><a className='btn-color' href="/editor">Try it Your Self</a></button>
+           </div>
+             
+              
+          
+   </div>
+
+       
+
+        <div class="card-content1">
         <h5 id="topic-exe">Test Yourself With Exercises </h5>
           <div class="card-body-exe">
               <p class="card-text">1.Create a variable named carName and assign the value Volvo to it.</p>
@@ -149,7 +142,7 @@ export default function CourseContent() {
           </div>
         </div>
 
-        <div class="card-content">
+        <div class="card-content1">
           <div class="card-body-exe">
             
               <p class="card-text">2.Create a variable named maxSpeed and assign the value 120 to it.</p>

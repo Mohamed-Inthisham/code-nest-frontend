@@ -174,7 +174,7 @@ const InternshipReqForm = () => {
               <div className="layout-page-home">
               <div className="internshipForm-container">
                   <img src={internshipForm} alt="internshipForm" className="internshipForm" />
-                  <div className="card-form">
+                  
                 <div className="row-con">
                   <div className="col-lg1">
                     <div className="card-form ">
@@ -247,7 +247,7 @@ const InternshipReqForm = () => {
                           <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
                       </div>
-                      </div>
+                      
                       </div>
                     </div>
                   </div>

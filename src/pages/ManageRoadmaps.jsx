@@ -66,8 +66,12 @@ function ManageRoadmaps() {
                     </td>
                     <td>
                       <div className="manageroadmap">
-                        <button type="button" className="manageroadmapbtn2">
-                          <Link to={`/editRoadmap/${roadmap.id}`} className='editbtn'>Edit</Link>
+
+                        <button
+                          type="button"
+                          className="manageroadmapbtn2">
+                          <a href='/editRoadmap' className='editbtn btn-primary'>Edit</a>
+
                         </button>
                         <button
                           type="button"

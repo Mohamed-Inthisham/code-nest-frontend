@@ -127,7 +127,7 @@ const AddRoadmap = () => {
                     <input type="text" class="form-control" id="mentorName" name="mentorName" value={formData.mentorName} onChange={handleChange} />
                     {errors.mentorName && <span className="error-msg">{errors.mentorName}</span>}
                   </div>
-                  <button type="submit" class="btn-roadmap">ADD</button>
+                  <button type="submit" class="btn-roadmap btn-primary">ADD</button>
                 </form>
               </div>
             </div>

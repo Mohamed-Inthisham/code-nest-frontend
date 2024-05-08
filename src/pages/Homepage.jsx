@@ -88,8 +88,7 @@ function Homepage() {
                 we propose in this article a temporal update language, named
                 JUpdate (Temporal JUpdate), for JSON data in the JSchema
                 environment. We define it as a temporal extension of our
-                previously introduced non-temporal JSON update language, named
-                JUpdate (JSON Update).
+                previously introduced non-temporal .
               </p>
             </div>
           </div>
@@ -110,7 +109,12 @@ function Homepage() {
                 Experiments show that the proposed metrics suite gives more than
                 2 % improvement in AUC and precision and approximately 1.5 % in
                 f1-score and recall with fewer code metrics than the existing
-                metrics suite.
+                metrics suite.We propose a new algorithm
+                and show through extensive experimentation that it can learn
+                grammars from recursive descendent parsers with consistently
+                high levels of both, recall and precision.cloud computing, online social networks, and mobile systems.
+                However, in the state-of-the-art of JSON data management, there
+                is neither a consensual nor a standard language for updating.
               </p>
             </div>
           </div>

@@ -23,6 +23,26 @@
     background-color: red;
 }
 
+.manageroadmapbtn2{
+    background-color: rgb(154, 187, 230);
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 50px;
+    border-radius: 10%; /* Makes the button round */
+    border: none; /* Removes default button border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.manageroadmapbtn2:hover{
+    background-color: rgb(98, 141, 234);
+}
+
 .arm{
   margin-left: -400px;
   margin-top: 220px;
@@ -40,7 +60,8 @@ display: flex;
   right: 0;
   height: 100vh;
   padding-right: 20px;
-  margin-top: -340px;
+  margin-top: -420px;
+  margin-right: 165px;
 }
 
 .roadmapStyle{
@@ -50,8 +71,27 @@ display: flex;
     font-size: 15px;
     padding-left: 5px;
     padding-right: 5px;
+    margin-top: 50p;
 }
 
 .roadmapStyle:hover {
     color: white;
 }
+
+.finaltablech{
+    margin-left: -150px;
+    margin-top: 150px;
+}
+
+.managecoursebtn2{
+    color: aqua;
+}
+
+.editbtn{
+    color: white;
+}
+
+.editbtn:hover{
+    color: white;
+}
+

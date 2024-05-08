@@ -42,9 +42,9 @@ function ManageRoadmaps() {
         </button>
       </div>
       <div>
-        <div className="card managecourse">
-          <div className="table-responsive text-nowrap">
-            <table className="table">
+        <div className="card managecourse finaltablech">
+          <div className="table-responsive text-nowrap ">
+            <table className="table ">
               <thead>
                 <tr>
                   <th>
@@ -74,6 +74,12 @@ function ManageRoadmaps() {
                     </td>
                     <td>
                       <div className="manageroadmap">
+                        <button
+                          type="button"
+                          className="manageroadmapbtn2">
+                          <a href='/editRoadmap' className='editbtn'>Edit</a>
+                        </button>
+
                         <button
                           type="button"
                           className="manageroadmapbtn1"

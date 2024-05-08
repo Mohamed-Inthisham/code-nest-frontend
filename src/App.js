@@ -24,6 +24,7 @@ import AddResourse from "./pages/AddResourse";
 import EditQuiz from "./pages/EditQuiz";
 import ManageRoadmaps from "./pages/ManageRoadmaps";
 import AddRoadmap from "./pages/AddRoadmap";
+import EditRoadmap from "./pages/EditRoadmap"
 
 import EditQuizHome from "./pages/EditQuizHome";
 import ViewQuizBody from "./pages/ViewQuizBody";
@@ -62,6 +63,7 @@ function App() {
           <Route path="/editQuiz" element={<EditQuiz />}></Route>
           <Route path="/manageRoadmaps" element={<ManageRoadmaps />}></Route>
           <Route path="/addRoadmap" element={<AddRoadmap />}></Route>
+          <Route path="/editRoadmap" element={<EditRoadmap />}></Route>
 
 
           <Route path="/editQuizHome" element={<EditQuizHome />}></Route>

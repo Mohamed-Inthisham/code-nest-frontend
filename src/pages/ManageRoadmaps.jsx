@@ -1,28 +1,29 @@
+// src/components/ManageRoadmaps.js
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../api/axios';
 import MentorSidebar from '../components/MentorSidebar';
+import { Link } from 'react-router-dom';
 import '../css/ManageRoadmaps.css';
 
 function ManageRoadmaps() {
   const [roadmaps, setRoadmaps] = useState([]);
 
   useEffect(() => {
+    const fetchRoadmaps = async () => {
+      try {
+        const response = await axiosInstance.get('/roadmaps');
+        setRoadmaps(response.data);
+      } catch (error) {
+        console.error('Error fetching roadmaps:', error);
+      }
+    };
     fetchRoadmaps();
   }, []);
-
-  const fetchRoadmaps = async () => {
-    try {
-      const response = await axiosInstance.get('/roadmaps');
-      setRoadmaps(response.data);
-    } catch (error) {
-      console.error('Error fetching roadmaps:', error);
-    }
-  };
 
   const handleDelete = async (id) => {
     try {
       await axiosInstance.delete(`/roadmaps/${id}`);
-      // Update roadmaps state after deletion
+      alert("Roadmap successfully deleted");
       const updatedRoadmaps = roadmaps.filter((roadmap) => roadmap.id !== id);
       setRoadmaps(updatedRoadmaps);
     } catch (error) {
@@ -36,35 +37,26 @@ function ManageRoadmaps() {
       <h1 className="text-one coursetitle">Manage Roadmaps</h1>
       <div className="armv">
         <button type="button" className="btn btn-primary arm">
-          <a className="roadmapStyle" href="/addRoadmap">
+          <Link className="roadmapStyle" to="/addRoadmap">
             Add Roadmap
-          </a>
+          </Link>
         </button>
       </div>
       <div>
         <div className="card managecourse finaltablech">
-          <div className="table-responsive text-nowrap ">
-            <table className="table ">
+          <div className="table-responsive text-nowrap">
+            <table className="table">
               <thead>
                 <tr>
-                  <th>
-                    <h4>Roadmap Name</h4>
-                  </th>
-                  <th>
-                    <h4>Mentor</h4>
-                  </th>
-                  <th>
-                    <h4>Action</h4>
-                  </th>
+                  <th><h4>Roadmap Name</h4></th>
+                  <th><h4>Mentor</h4></th>
+                  <th><h4>Action</h4></th>
                 </tr>
               </thead>
               <tbody className="table-border-bottom-0">
                 {roadmaps.map((roadmap) => (
                   <tr key={roadmap.id}>
-                    <td>
-                      <i className="bx  bx-sm me-3"></i>
-                      <span className="textv">{roadmap.rmTitle}</span>
-                    </td>
+                    <td><span className="textv">{roadmap.rmTitle}</span></td>
                     <td>
                       <div className="manageroadmap">
                         <h5 type="text" className="manageroadmaptxt">
@@ -74,12 +66,13 @@ function ManageRoadmaps() {
                     </td>
                     <td>
                       <div className="manageroadmap">
+
                         <button
                           type="button"
                           className="manageroadmapbtn2">
                           <a href='/editRoadmap' className='editbtn btn-primary'>Edit</a>
-                        </button>
 
+                        </button>
                         <button
                           type="button"
                           className="manageroadmapbtn1"

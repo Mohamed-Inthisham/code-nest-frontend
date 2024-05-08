@@ -13,12 +13,22 @@
 .btn2{
     background-color: rgb(17, 47, 107);
     margin-top: -150px;
-    margin-left: 600px;
-   
+    margin-left: 620px;
+    color: white;
  }
+
+ .btn2:hover{
+    background-color: rgb(9, 53, 140);
+    color: white;
+ }
+
 .add-video-link{
     color: white;
 }
  .add-course-link{
     color: white;
+ }
+
+ .y1{
+    background-color: aqua;
  }

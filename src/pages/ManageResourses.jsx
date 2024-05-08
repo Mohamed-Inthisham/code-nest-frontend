@@ -38,6 +38,7 @@ export default function ManageResourses() {
   const handleEdit = (id) => {
     // Implement your edit functionality here, e.g., redirect to an edit page
     console.log(`Editing resource with ID: ${id}`);
+    
   };
 
   return (
@@ -50,11 +51,54 @@ export default function ManageResourses() {
           <div className="topic-btn">
             <h5 className="card-header">Referenced Videos & Courses</h5>
             <div>
-              <button type="button" className="btn btn-primary btn2">
+              {/* <button type="button" className="btn btn-primary btn2">
                 <a className="add-video-link" href="/addResourse">
                   Add Resource
                 </a>
-              </button>
+              </button> */}
+              <button
+                          type="button"
+                          class="btn btn2"
+                          data-bs-toggle="modal"
+                          data-bs-target="#basicModal">
+                          Add Resource
+                        </button>
+
+                        <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1">Add Resourses</h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+
+
+                              <div class="modal-body">
+                                <div class="row">
+                                  <div class="col mb-3">
+                                    <label for="nameBasic" class="form-label">Title</label>
+                                    <input type="text" id="nameBasic" class="form-control" placeholder="Enter Name" />
+                                  </div>
+                                </div>
+                                <div class="row g-2">
+                                <div class="col mb-3">
+                                    <label for="nameBasic" class="form-label">Link</label>
+                                    <input type="text" id="nameBasic" class="form-control" placeholder="Enter Name" />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Add</button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
             </div>
           </div>
           <div className="table-responsive text-nowrap">
@@ -81,7 +125,8 @@ export default function ManageResourses() {
                           <i className="bx bx-dots-vertical-rounded"></i>
                         </button>
                         <div className="dropdown-menu">
-                          <button className="dropdown-item" onClick={() => handleEdit(resource.id)}>
+                          <button className="dropdown-item" data-bs-toggle="modal"
+                          data-bs-target="#basicModal" onClick={() => handleEdit(resource.id)}>
                             <i className="bx bx-edit-alt me-1"></i> Edit
                           </button>
                           <button className="dropdown-item" onClick={() => handleDelete(resource.id)}>

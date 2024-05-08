@@ -77,7 +77,7 @@ function ManageRoadmaps() {
                         <button
                           type="button"
                           className="manageroadmapbtn2">
-                          <a href='/editRoadmap' className='editbtn'>Edit</a>
+                          <a href='/editRoadmap' className='editbtn btn-primary'>Edit</a>
                         </button>
 
                         <button

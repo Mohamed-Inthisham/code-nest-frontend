@@ -4,7 +4,7 @@
     margin-top: 30px;
 }
 .main-roadmap{
-    background-color: #ddf0fd;
+    background-color: #ffffff;
     width: 600px;
     height: 550px;
     justify-content: center;
@@ -32,9 +32,8 @@
     text-align: center;
     width: 80px;
     margin-top: 30px;
-    background-color: #abdcfc;
     font-style: oblique;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 10px;
     border-radius: 10%; /* Makes the button round */
     border: none; /* Removes default button border */
@@ -43,6 +42,3 @@
 }
 
 
-.btn-roadmap:hover{
-    background-color: rgb(32, 158, 216);
-}

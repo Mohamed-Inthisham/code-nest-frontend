@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import MentorSidebar from '../components/MentorSidebar';
-import '../css/AddRoadmap.css';
+// src/components/EditRoadmap.js
+import React, { useState, useEffect } from 'react';
 import axiosInstance from '../api/axios';
+import MentorSidebar from '../components/MentorSidebar';
+import { useParams } from 'react-router-dom';
+import '../css/AddRoadmap.css';
 
-const AddRoadmap = () => {
+const EditRoadmap = () => {
+  const { roadmapId } = useParams();
   const [formData, setFormData] = useState({
     image: null,
     rmTitle: '',
@@ -13,65 +16,59 @@ const AddRoadmap = () => {
 
   const [errors, setErrors] = useState({});
 
+  useEffect(() => {
+    const fetchRoadmapData = async () => {
+      try {
+        const response = await axiosInstance.get(`/roadmaps/${roadmapId}`);
+        setFormData({
+          rmTitle: response.data.rmTitle,
+          description: response.data.description,
+          mentorName: response.data.mentorName,
+          image: response.data.image
+        });
+      } catch (error) {
+        console.error('Error fetching roadmap data:', error);
+        alert('Failed to load roadmap data');
+      }
+    };
+
+    fetchRoadmapData();
+  }, [roadmapId]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // Basic validations
     let error = '';
-    if (name === 'rmTitle' && !value.trim()) {
-      error = 'Roadmap Title is required';
-    } else if (name === 'description' && !value.trim()) {
-      error = 'Description is required';
-    } else if (name === 'mentorName' && !value.trim()) {
-      error = 'Mentor Name is required';
+    if (!value.trim()) {
+      error = `${name.charAt(0).toUpperCase() + name.slice(1)} is required`;
     }
-
-    setErrors({
-      ...errors,
-      [name]: error
-    });
-
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setErrors({ ...errors, [name]: error });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      image: e.target.files[0]
-    });
+    setFormData({ ...formData, image: e.target.files[0] });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Check for empty fields
     let formValid = true;
     const newErrors = {};
 
-    if (!formData.rmTitle.trim()) {
-      newErrors.rmTitle = 'Roadmap Title is required';
-      formValid = false;
-    }
-
-    if (!formData.description.trim()) {
-      newErrors.description = 'Description is required';
-      formValid = false;
-    }
-
-    if (!formData.mentorName.trim()) {
-      newErrors.mentorName = 'Mentor Name is required';
-      formValid = false;
-    }
+    ['rmTitle', 'description', 'mentorName'].forEach(field => {
+      if (!formData[field].trim()) {
+        newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
+        formValid = false;
+      }
+    });
 
     if (!formData.image) {
       newErrors.image = 'Image is required';
       formValid = false;
     }
 
+    setErrors(newErrors);
+
     if (!formValid) {
-      setErrors(newErrors);
       return;
     }
 
@@ -82,54 +79,49 @@ const AddRoadmap = () => {
     data.append('mentorName', formData.mentorName);
 
     try {
-      const response = await axiosInstance.post('roadmaps', data, {
+      await axiosInstance.put(`/roadmaps/${roadmapId}`, data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
       });
-      console.log(response.data);
-      // Handle success response
-      alert('Roadmap added successfully');
-      // Redirect or perform any other action upon successful addition
+      alert('Roadmap updated successfully');
     } catch (error) {
-      // Handle error
-      alert('Error adding roadmap: ' + error);
+      console.error('Error updating roadmap:', error);
+      alert('Error updating roadmap: ' + error.message);
     }
   };
 
   return (
-    <div>
-      <div className="layout-wrapper layout-content-navbar">
-        <div className="layout-container roadmap">
-          <MentorSidebar />
-          <div className="roadmap-content-body">
-            <h1 className='text-one add-roadmap'>Edit Roadmap</h1>
-            <div class="card-content main-roadmap">
-              <div class="card-body-roadmap">
-                <form className='roadmap-form' onSubmit={handleSubmit}>
-                  <div class="text-field-roadmap">
-                    <label class="form-label" for="photo-upload">Upload Photo:</label>
-                    <input type="file" class="form-control" id="photo-upload" accept="image/*" onChange={handleFileChange} />
-                    {errors.image && <span className="error-msg">{errors.image}</span>}
-                  </div>
-                  <div class="text-field-roadmap">
-                    <label class="form-label" for="rmTitle">Roadmap Title :</label>
-                    <input type="text" class="form-control" id="rmTitle" name="rmTitle" value={formData.rmTitle} onChange={handleChange} />
-                    {errors.rmTitle && <span className="error-msg">{errors.rmTitle}</span>}
-                  </div>
-                  <div class="text-field-roadmap">
-                    <label class="form-label" for="description">Description :</label>
-                    <textarea class="form-control" id="description" rows="4" name="description" value={formData.description} onChange={handleChange}></textarea>
-                    {errors.description && <span className="error-msg">{errors.description}</span>}
-                  </div>
-                  <div class="text-field-roadmap">
-                    <label class="form-label" for="mentorName">Mentor Name :</label>
-                    <input type="text" class="form-control" id="mentorName" name="mentorName" value={formData.mentorName} onChange={handleChange} />
-                    {errors.mentorName && <span className="error-msg">{errors.mentorName}</span>}
-                  </div>
-                  <button type="submit" class="btn-roadmap">ADD</button>
-                </form>
-              </div>
+    <div className="layout-wrapper layout-content-navbar">
+      <div className="layout-container roadmap">
+        <MentorSidebar />
+        <div className="roadmap-content-body">
+          <h1 className='text-one add-roadmap'>Edit Roadmap</h1>
+          <div className="card-content main-roadmap">
+            <div className="card-body-roadmap">
+              <form className='roadmap-form' onSubmit={handleSubmit}>
+                <div className="text-field-roadmap">
+                  <label className="form-label" htmlFor="photo-upload">Upload Photo:</label>
+                  <input type="file" className="form-control" id="photo-upload" accept="image/*" onChange={handleFileChange} />
+                  {errors.image && <span className="error-msg">{errors.image}</span>}
+                </div>
+                <div className="text-field-roadmap">
+                  <label className="form-label" htmlFor="rmTitle">Roadmap Title:</label>
+                  <input type="text" className="form-control" id="rmTitle" name="rmTitle" value={formData.rmTitle} onChange={handleChange} />
+                  {errors.rmTitle && <span className="error-msg">{errors.rmTitle}</span>}
+                </div>
+                <div className="text-field-roadmap">
+                  <label className="form-label" htmlFor="description">Description:</label>
+                  <textarea className="form-control" id="description" rows="4" name="description" value={formData.description} onChange={handleChange}></textarea>
+                  {errors.description && <span className="error-msg">{errors.description}</span>}
+                </div>
+                <div className="text-field-roadmap">
+                  <label className="form-label" htmlFor="mentorName">Mentor Name:</label>
+                  <input type="text" className="form-control" id="mentorName" name="mentorName" value={formData.mentorName} onChange={handleChange} />
+                  {errors.mentorName && <span className="error-msg">{errors.mentorName}</span>}
+                </div>
+                <button type="submit" className="btn-roadmap">Update</button>
+              </form>
             </div>
           </div>
         </div>
@@ -138,4 +130,4 @@ const AddRoadmap = () => {
   );
 };
 
-export default AddRoadmap;
+export default EditRoadmap;

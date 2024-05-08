@@ -28,7 +28,7 @@ const EditRoadmap = () => {
         });
       } catch (error) {
         console.error('Error fetching roadmap data:', error);
-        
+        alert('Failed to load roadmap data');
       }
     };
 

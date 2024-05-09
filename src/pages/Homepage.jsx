@@ -109,12 +109,17 @@ function Homepage() {
                 Experiments show that the proposed metrics suite gives more than
                 2 % improvement in AUC and precision and approximately 1.5 % in
                 f1-score and recall with fewer code metrics than the existing
-                metrics suite.We propose a new algorithm
-                and show through extensive experimentation that it can learn
-                grammars from recursive descendent parsers with consistently
-                high levels of both, recall and precision.cloud computing, online social networks, and mobile systems.
-                However, in the state-of-the-art of JSON data management, there
-                is neither a consensual nor a standard language for updating.
+                metrics suite.
+                Many code metrics exist for bug prediction. However, these
+                metrics are based on the trivial count of code properties and
+                are not sufficient. This research article proposes three new
+                code metrics based on class complexity, coupling, and cohesion
+                to fill the gap. The Promise repository metrics suite's
+                complexity, coupling, and cohesion metrics are replaced by the
+                proposed metrics, and a new metric suite is generated.
+                Experiments show that the proposed metrics suite gives more than
+                2 % improvement in AUC and precision and approximately 1.5 % in
+                f1-score.
               </p>
             </div>
           </div>
@@ -143,6 +148,9 @@ function Homepage() {
                 and show through extensive experimentation that it can learn
                 grammars from recursive descendent parsers with consistently
                 high levels of both, recall and precision.
+                We propose a new algorithm
+                and show through extensive experimentation that it can learn
+                grammars from recursive descendent parsers. 
               </p>
             </div>
           </div>

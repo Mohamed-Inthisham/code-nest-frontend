@@ -88,8 +88,7 @@ function Homepage() {
                 we propose in this article a temporal update language, named
                 JUpdate (Temporal JUpdate), for JSON data in the JSchema
                 environment. We define it as a temporal extension of our
-                previously introduced non-temporal JSON update language, named
-                JUpdate (JSON Update).
+                previously introduced non-temporal .
               </p>
             </div>
           </div>

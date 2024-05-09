@@ -51,7 +51,7 @@ const Login = () => {
                   <a href="index.html" className="app-brand-link gap-2"></a>
                 </div>
                 <br />
-                <h4 className="mb-2">Welcome to Code Nest! 👋</h4>
+                <h4 className="mt-4 mb-2">Welcome to Code Nest! 👋</h4>
 
                 <p className="mb-4">
                   <br />
@@ -94,8 +94,8 @@ const Login = () => {
                         value={formData.Password}
                         onChange={handleChange}
                       />
-                      {errors.Password && <div className="text-danger">{errors.Password}</div>}
                     </div>
+                    {errors.Password && <div className="text-danger">{errors.Password}</div>}
                   </div>
                   <div className="mb-3">
                     <div className="form-check">
@@ -113,7 +113,7 @@ const Login = () => {
                     <br />
                   </div>
                   <div className="mb-3">
-                    <button className="btn btn-primary d-grid w-100" type="submit">
+                    <button className="btn btn-primary d-grid w-100 mt-0" type="submit">
                       Sign in
                     </button>
                   </div>

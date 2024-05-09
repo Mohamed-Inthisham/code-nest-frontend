@@ -5,11 +5,11 @@
   
   .cardv-reg{
     background-color: rgb(255, 255, 255, 1);
-    margin-top: -26px;
-    margin-left: 763px;
+    margin-top: -64px;
+    margin-left: 764px;
     border-radius: 0px 20px 20px 0px;
     width: 450px;
-    min-height: 610px;
+    min-height: 610.5px;
     /* Optionally set a maximum width to avoid excessively wide cards */
     max-height: 600px;
     /* Optionally set a width to accommodate shorter content better */
@@ -38,6 +38,13 @@
     background-position: center;
     margin-top: 200px;
     /* outline: auto; */
+  }
+
+  .text-color-blue{
+    color: rgb(60, 104, 116);
+    text-decoration: solid;
+    font-size: 25px;
+    font-weight: bold;
   }
 
    .form-control {

@@ -366,7 +366,7 @@ function Editor(props) {
 
 
     return (
-        <div className="mt-5" style={{ overflowX: 'hidden' }}>
+        <div className="-mt-6" style={{ overflowX: 'hidden' }}>
             <br />
             <br />
             <div className="">
@@ -409,10 +409,11 @@ function Editor(props) {
 
                     <div className="col-md-3">
                         <div className="bg-white p-4 rounded shadow" style={{ height: '650px' }}>
-                            <div className="mb-3 text-center">
+                            <div className="mb-0 text-center">
                                 <div className="dropdown d-inline-block">
+                                    <h4>Voice Command Interface</h4>
                                     <button className="btn btn-secondary dropdown-toggle bg-slate-400" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Select Language: {language}
+                                        Select Language : {language}
                                     </button>
                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a className="dropdown-item" href="#" onClick={() => setlanguage('Javascript')}>Javascript</a></li>
@@ -422,7 +423,7 @@ function Editor(props) {
                             </div>
                             <br></br>
 
-                            <h3 className="mb-3"><b>Say Your Commands</b></h3>
+                            <h5 className="mb-2"><b>Say Your Commands</b></h5>
                             <div className="main-content mb-3 p-2 border" style={{ height: '60px', cursor: 'pointer' }} onClick={() => setTextToCopy(transcript)}>
                                 {transcript}
                             </div>

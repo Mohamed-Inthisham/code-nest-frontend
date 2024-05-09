@@ -1,11 +1,12 @@
   .authentication-innerv .card{
     background-color:transparent(255, 255, 0.8);
+    width: 388px
   }
   
   .cardv-reg{
     background-color: rgb(255, 255, 255, 1);
     margin-top: -26px;
-    margin-left: 752px;
+    margin-left: 763px;
     border-radius: 0px 20px 20px 0px;
     width: 450px;
     min-height: 610px;

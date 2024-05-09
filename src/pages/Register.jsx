@@ -71,9 +71,9 @@ const Register = () => {
             <div className="card cardv-reg">
               <div className="card-body">
                 <div className="app-brand justify-content-center"></div>
-                <h4 className="mb-2">Learning starts here 🚀</h4>
-                <form id="formAuthentication" className="mb-3" onSubmit={handleSubmit}>
-                  <div className="mb-2">
+                <h4 className="mb-1">Learning starts here 🚀</h4>
+                <form id="formAuthentication" className="mb-1 w-700" onSubmit={handleSubmit}>
+                  <div className="mb-1">
                     <label htmlFor="firstname" className="form-label">
                       First Name
                     </label>
@@ -89,7 +89,7 @@ const Register = () => {
                     />
                     {errors.firstname && <div className="text-danger">{errors.firstname}</div>}
                   </div>
-                  <div className="mb-3">
+                  <div className="mb-1">
                     <label htmlFor="lastname" className="form-label">
                       Last Name
                     </label>
@@ -104,7 +104,7 @@ const Register = () => {
                     />
                     {errors.lastname && <div className="text-danger">{errors.lastname}</div>}
                   </div>
-                  <div className="mb-3">
+                  <div className="mb-1">
                     <label htmlFor="email" className="form-label">
                       Email
                     </label>
@@ -119,7 +119,7 @@ const Register = () => {
                     />
                     {errors.email && <div className="text-danger">{errors.email}</div>}
                   </div>
-                  <div className="mb-3 form-password-toggle">
+                  <div className="mb-1 form-password-toggle">
                     <label className="form-label" htmlFor="password">
                       Password
                     </label>
@@ -134,13 +134,13 @@ const Register = () => {
                         onChange={handleChange}
                         value={formData.password}
                       />
-                      {errors.password && <div className="text-danger">{errors.password}</div>}
                       <span className="input-group-text cursor-pointer">
                         <i className="bx bx-hide" />
                       </span>
                     </div>
+                    {errors.password && <div className="text-danger">{errors.password}</div>}
                   </div>
-                  <div className="mb-3 form-password-toggle">
+                  <div className="mb-1 form-password-toggle">
                     <label className="form-label" htmlFor="re-type_password">
                       Re-type Password
                     </label>
@@ -155,15 +155,16 @@ const Register = () => {
                         onChange={handleChange}
                         value={formData['re-type_password']}
                       />
-                      {errors['re-type_password'] && (
-                        <div className="text-danger">{errors['re-type_password']}</div>
-                      )}
+                      
                       <span className="input-group-text cursor-pointer">
                         <i className="bx bx-hide" />
                       </span>
                     </div>
+                    {errors['re-type_password'] && (
+                        <div className="text-danger">{errors['re-type_password']}</div>
+                      )}
                   </div>
-                  <div className="mb-3">
+                  <div className="mb-4">
                     <div className="form-check">
                       <input
                         className="form-check-input"
@@ -180,7 +181,7 @@ const Register = () => {
                       {errors.terms && <div className="text-danger">{errors.terms}</div>}
                     </div>
                   </div>
-                  <button className="btn btn-primary d-grid w-100">Sign up</button>
+                  <button className="btn btn-primary d-grid w-100 mb-3">Sign up</button>
                 </form>
                 <p className="text-center">
                   <span>Already have an account?</span>

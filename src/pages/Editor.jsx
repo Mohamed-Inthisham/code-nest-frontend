@@ -366,10 +366,7 @@ function Editor(props) {
 
 
     return (
-
-
-
-        <div className="mt-5" style={{ overflowX: 'hidden' }}>
+        <div className="-mt-6" style={{ overflowX: 'hidden' }}>
             <br />
             <br />
             <div className="">
@@ -380,13 +377,13 @@ function Editor(props) {
 
                     <div className="col-md-6">
                         <div className="bg-gray-100 rounded-lg shadow">
-                            <div className="text-lg font-bold px-4 py-2 bg-blue-800 text-white">
-                                My Code Editor
+                            <div className="text-lg font-bold px-4 py-2 bg-dark text-white">
+                                Try this Code Editor
                                 <span
                                     onClick={() => CodeMirrorEditor.runCode()}
                                     title="Click here to run this file"
-                                    className={`float-right cursor-pointer ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
-                                >
+                                    className={`mt-1 float-right cursor-pointer text-md ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                                >Run
                                     {loading ? (
                                         <i className="animate-spin fa fa-circle-o-notch fa-3x"></i>
                                     ) : (
@@ -412,10 +409,11 @@ function Editor(props) {
 
                     <div className="col-md-3">
                         <div className="bg-white p-4 rounded shadow" style={{ height: '650px' }}>
-                            <div className="mb-3 text-center">
+                            <div className="mb-0 text-center">
                                 <div className="dropdown d-inline-block">
+                                    <h4>Voice Command Interface</h4>
                                     <button className="btn btn-secondary dropdown-toggle bg-slate-400" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Select Language: {language}
+                                        Select Language : {language}
                                     </button>
                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a className="dropdown-item" href="#" onClick={() => setlanguage('Javascript')}>Javascript</a></li>
@@ -425,37 +423,37 @@ function Editor(props) {
                             </div>
                             <br></br>
 
-                            {/* <h1 className="mb-3"><b>Say Your Commands</b></h1>
+                            <h5 className="mb-2"><b>Say Your Commands</b></h5>
                             <div className="main-content mb-3 p-2 border" style={{ height: '60px', cursor: 'pointer' }} onClick={() => setTextToCopy(transcript)}>
                                 {transcript}
                             </div>
                             <hr />
                             <div className="main-content mb-3 p-2 border" style={{ height: '250px', overflowY: 'auto' }}>
                                 {keywords}
-                            </div> */}
+                            </div>
 
 
                             <div>
                                 <div className="mb-4 text-center">
-                                    {/* <div className="flex justify-center space-x-4">
+                                    <div className="flex justify-center space-x-4">
                                         <button
-                                            className="px-4 py-2 text-white bg-purple-600 hover:bg-purple-700 rounded-full"
+                                            className="px-4 py-2 text-white bg-blue-900 hover:bg-blue-500 rounded-full"
                                             onClick={applyGeneratedCode}
                                         >
                                             Apply Code
                                         </button>
                                         <button
-                                            className="px-4 py-2 text-white bg-gray-600 hover:bg-gray-700 rounded-full"
+                                            className="px-4 py-2 text-white bg-gray-900 hover:bg-gray-500 rounded-full"
                                             onClick={rejectCode}
                                         >
                                             Clear
                                         </button>
-                                    </div> */}
+                                    </div>
                                 </div>
-                                {/* <div className="btn-style text-center">
+                                <div className="btn-style text-center">
                                     <div className="flex justify-center space-x-4">
                                         <button
-                                            className={`px-4 py-2 text-white rounded-full ${isCopied ? 'bg-green-500 hover:bg-green-600' : 'bg-purple-600 hover:bg-purple-700'}`}
+                                            className={`px-4 py-2 text-white rounded-full ${isCopied ? 'bg-green-500 hover:bg-green-600' : 'bg-blue-900 hover:bg-blue-500'}`}
                                             onClick={setCodeEditor}
                                         >
                                             {isCopied ? 'Copied!' : 'Copy Clipboard'}
@@ -467,7 +465,7 @@ function Editor(props) {
                                             {isListening ? 'Stop Listening' : 'Start Listening'}
                                         </button>
                                     </div>
-                                </div> */}
+                                </div>
                             </div>
 
 

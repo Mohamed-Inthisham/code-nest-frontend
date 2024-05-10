@@ -24,8 +24,8 @@ export default function Guidence() {
 
 
         <div className="container col-span-3 mx-auto p-4 bg-gray-100 rounded shadow ml-4 relative" style={{ textAlign: 'left', height: '650px', overflowX: 'hidden' }}>
-            {/* <center><h2 className="text-2xl mb-4"><b>Voice Command Guide</b></h2></center> */}
-            {/* <div className={`mb-5 ${currentPage === 0 ? 'block' : 'hidden'}`} >
+            <center><h2 className="text-2xl mb-4"><b>Voice Command Guide</b></h2></center>
+            <div className={`mb-5 ${currentPage === 0 ? 'block' : 'hidden'}`} >
                 <p className="text-base">Follow these steps to use the voice command interface:</p>
                 <ol className="list-decimal list-inside">
                     <li className="mb-1"> Select a programming language from the dropdown.</li>
@@ -37,10 +37,11 @@ export default function Guidence() {
                     <li className="mb-1"> Click the "Run Code" button to execute the code and see the output.</li>
                     <li> Or Give "Execute" voice command</li>
                 </ol>
-            </div> */}
+            </div>
             {/* ... Other content for Page 1 */}
             <div className={`${currentPage === 1 ? 'block' : 'hidden'}`}>
-                {/* <ul className="list-decimal list-inside mb-5">
+            <p className="text-base" style={{ bottom: '0px' }}>Here are some example commands:</p>
+                <ul className="list-decimal list-inside mb-5">
                     <li className="mb-1"><strong>"create function":</strong>  Create a function template.</li>
                     <li className="mb-1"><strong>"declare variable":</strong>  Declare variable.</li>
                     <li className="mb-1"><strong>"constant":</strong>  Generates constant declaration.</li>
@@ -53,13 +54,14 @@ export default function Guidence() {
                     <li className="mb-1"><strong>"create if else":</strong>  Generates if-else statement.</li>
                     <li className="mb-1"><strong>"execute":</strong>  Executes the code.</li>
                     <li className="mb-1"><strong>"print variable":</strong>  Displays the value of a variable.</li>
-                </ul> */}
-                <p className="text-base" style={{ bottom: '0px' }}>Here are some example commands:</p>
+                </ul>
+                
                 {/* ... Other content for Page 2 */}
             </div>
             {/* ... Other content for Page 2 */}
             <div className={`${currentPage === 2 ? 'block' : 'hidden'}`}>
-                {/* <ul className="list-decimal list-inside mb-5">
+                
+                <ul className="list-decimal list-inside mb-5">
                     <li className="mb-1"><strong>"create loop with condition i less than 10"::</strong>  Generates a for loop with the specified condition.</li>
                     <li className="mb-1"><strong>"create if else statement with condition x greater than 5":</strong>  Generates an if-else statement with the specified condition.</li>
                     <li className="mb-1"><strong>"create break statement":</strong>  Generates an break statement with the specified condition.</li>
@@ -67,12 +69,13 @@ export default function Guidence() {
                     <li className="mb-1"><strong>"constant ConstantName":</strong> Generates a constant declaration.</li>
                     <li className="mb-1"><strong>"create object hello":</strong>  Generates an object declaration with attributes.</li>
                     <li className="mb-1"><strong>"initialize Number":</strong> Generates variable initialization with a specified type.</li>
-                </ul> */}
-                <h4 className="text-lg mb-4">Example Voice Commands:</h4>
+                </ul>
+                
                 {/* ... Other content for Page 3 */}
             </div>
             <div className={`${currentPage === 3 ? 'block' : 'hidden'}`}>
-                {/* <ul className="list-decimal list-inside mb-5">
+            <h4 className="text-lg mb-4">Example Voice Commands:</h4>
+                <ul className="list-decimal list-inside mb-5">
                     <li className="mb-1"><strong>"create star pattern"::</strong>  Generates star pattern using the specified condition.</li>
                     <li className="mb-1"><strong>"summation":</strong>  Generates summation using two integer type inputs.</li>
                     <li className="mb-1"><strong>"find text size":</strong>  Generates a code using .length.</li>
@@ -82,37 +85,37 @@ export default function Guidence() {
                     <li className="mb-1"><strong>"create function myFunction": </strong> Generates a function template.</li>
                     <li className="mb-1"><strong>"declare variable myVariable":</strong>  Generates a variable declaration.</li>
                     <li className="mb-1"><strong>"print variable varibleName":</strong> Displays the value of a variable.</li>
-                </ul> */}
-                <h4 className="text-lg mb-4">Example Voice Commands:</h4>
+                </ul>
+                {/* <h4 className="text-lg mb-4">Example Voice Commands:</h4> */}
                 {/* ... Other content for Page 3 */}
             </div>
             <div className={`${currentPage === 4 ? 'block' : 'hidden'}`}>
-                {/* <ul className="list-decimal list-inside mb-5">
+                <ul className="list-decimal list-inside mb-4">
                     <li className="mb-1"><strong>"create arrow function"::</strong>  Generates arrow function structure.</li>
                     <li className="mb-1"><strong>"create while loop":</strong>  Generates while loop statement.</li>
                     <li className="mb-1"><strong>"create switch statement":</strong>  Generates  switch statement</li>
                     <li className="mb-1"><strong>"create template literal":</strong>  Generates a template literal.</li>
                     
-                </ul> */}
-                {/* <h4 className="text-lg mb-4">Example Voice Commands:</h4> */}
-                {/* ... Other content for Page 3 */}
+                </ul>
+                {/* <h4 className="text-lg mb-4">Example Voice Commands:</h4>  */}
+                ... Other content for Page 3
             </div>
 
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-3">
-                {/* <button
-                    className="btn me-1 w-20"
+            <div className=" flex relative mb-0 mt-4 ml-12 ">
+                 <button
+                    className="btn me-2 w-50"
                     onClick={prevPage}
-                    style={{ borderRadius: "28px", background: "linear-gradient(45deg, #010758, #490d61)", color: 'white' }}
+                    style={{ borderRadius: "28px", padding: "7px 22px", background: "linear-gradient(45deg, #010758, #490d61)", color: 'white' }}
                 >
                     Previous
                 </button>
                 <button
-                    className="btn btn-primary w-20"
+                    className="btn me-2 w-50"
                     onClick={nextPage}
                     style={{ borderRadius: "28px", padding: "5px 22px", background: "linear-gradient(45deg, #010758, #490d61)", color: 'white' }}
                 >
                     Next
-                </button> */}
+                </button>
             </div>
         </div>
     );

@@ -42,7 +42,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-clip: padding-box;
 }
-.card-form {
+/* .card-form {
     --bs-card-spacer-y: 1.5rem;
     --bs-card-spacer-x: 1.5rem;
     --bs-card-title-spacer-y: 0.875rem;
@@ -62,7 +62,7 @@
     --bs-card-bg: #fff;
     --bs-card-img-overlay-padding: 1.5rem;
     --bs-card-group-margin: 0.8125rem;
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -70,7 +70,7 @@
     word-wrap: break-word;
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
-}
+} */
 
 .card-body-1 {
     flex: 1 1 auto;
@@ -90,4 +90,74 @@
     color: red;
     font-size: 0.85em;
     margin-top: 5px;
+  }
+
+  .intern .internshipForm {
+    width: 5500px;
+    height: fit-content;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.internshipForm-container {
+    position: relative;
+    width: 100%; /* Adjust this as per the actual width of the image or container */
+}
+
+.internshipForm {
+    width: 100%;
+    display: block; /* ensures it covers the full container width */
+    height: 98%; /* maintains aspect ratio */
+}
+.layout-page-home {
+    position: relative;
+    padding-top: 20px; /* Space for form */
+}
+.card-form {
+    position: absolute;
+    top: 70px; /* Adjust this value to position the form correctly over the image */
+    left: 53%; /* Centers the form horizontally */
+    transform: translateX(-50%); 
+    width: 600px; /* Set a fixed width or as required */
+    background-color: rgba(255, 255, 255, 0.85); /* Optional: makes it slightly transparent */
+    padding: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    
+}
+.internshipForm {
+  position: relative;
+  text-align: center;
+}
+
+.form-background {
+  width: 100%;
+  height: auto; /* Adjust based on your needs */
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5); /* Make input fields slightly transparent too */
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.85em;
+    display: block;
   }

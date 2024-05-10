@@ -29,10 +29,9 @@ const InternRequest = () => {
       <div>
         <div className="d-inline-flex p-2 bd-highlight">
           <CompanySidebar />
+          <h1 className='text-one coursetitle'>Internship List</h1>
           <div className="card" id="intern-list">
-            <h5 className="card-header" id="emphead">
-              Internship Request List
-            </h5>
+          
             <div className="table-responsive text-nowrap">
               <table className="table">
                 <thead>

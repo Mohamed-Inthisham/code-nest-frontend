@@ -25,16 +25,18 @@ function Mentoring() {
   return (
     <div>
       <div className="demo-inline-spacing bn-main">
+        
         <button type="button" className="btn btn-secondary bn-mentoring-main">
           <Link to="/mentoring">
             <h6 className="bn-word-main">Roadmap</h6>
           </Link>
         </button>
-        <button type="button" className="btn btn- bn-mentoring">
+        <button type="button" className="btn btn-secondary bn-mentoring-main">
           <Link to="/resources">
-            <h6 className="bn-word">Resources</h6>
+            <h6 className="bn-word-main">Resources</h6>
           </Link>
         </button>
+        
       </div>
 
       <div className="roadmap-one">

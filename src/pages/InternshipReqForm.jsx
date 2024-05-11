@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/InternshipReqForm.css';
 import axiosInstance from '../api/axios';
-import internshipForm from '../images/recruitment.webp'
+import internshipForm from '../images/1.png'
 
 const InternshipReqForm = () => {
   const [formData, setFormData] = useState({

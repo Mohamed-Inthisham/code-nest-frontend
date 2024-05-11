@@ -1,5 +1,7 @@
 .req-to{
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-family:Helvetica;
+    padding-bottom: 15px;
+    padding-left:  140px;
 }
 
 .row-con{
@@ -113,16 +115,17 @@
     position: relative;
     padding-top: 20px; /* Space for form */
 }
-.card-form {
+.card-form1 {
     position: absolute;
-    top: 70px; /* Adjust this value to position the form correctly over the image */
-    left: 53%; /* Centers the form horizontally */
-    transform: translateX(-50%); 
-    width: 600px; /* Set a fixed width or as required */
-    background-color: rgba(255, 255, 255, 0.85); /* Optional: makes it slightly transparent */
+    top: 25px; 
+    left: 55%;
+    transform: translateX(-60%); 
+    width: 650px; 
+    background-color: rgba(255, 255, 255, 0.90);
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    border-radius: 15px;
+    height: fit-content;
     
 }
 .internshipForm {

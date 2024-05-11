@@ -65,6 +65,12 @@ function CompanySidebar() {
                                 <div data-i18n="Layouts">Intern</div>
                                 </a>
                                 </li>
+
+                                <li className="menu-item active ">
+                                <a href="/internRequests" className="menu-link">
+                                <div data-i18n="Layouts">Intern approvel</div>
+                                </a>
+                                </li>
                     
                             </ul>
                         </aside>

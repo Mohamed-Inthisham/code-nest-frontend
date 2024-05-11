@@ -60,9 +60,9 @@ function ManageCourses() {
                     </td>
                     <td>
                       <div class="managecoursebtnmain">
-                        <button type="button" class="managecoursebtn1" onClick={() => handleDelete(course.id)}>Delete</button>
-                        <button type="button" class="managecoursebtn2"><a href='/editCourses' className='uu'>Edit</a></button>
-                        <button type="button" class="managecoursebtn3" ><a href='/addContent' className='uu'>Add Content</a></button>
+                        <button type="button" class="managecoursebtn1 btn-danger" onClick={() => handleDelete(course.id)}>Delete</button>
+                        <button type="button" class="managecoursebtn2 btn-primary"><a href='/editCourses' className='uu'>Edit</a></button>
+                        <button type="button" class="managecoursebtn3 btn-primary"><a href='/addContent' className='uu'>Add Content</a></button>
                       </div>
                     </td>
                   </tr>

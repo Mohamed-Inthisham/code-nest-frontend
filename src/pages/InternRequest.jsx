@@ -24,6 +24,13 @@ const InternRequest = () => {
     window.open(pdfUrl, '_blank');
   };
 
+  const handleEmail = (email, fullName) => {
+    const subject = encodeURIComponent(`Regarding your internship application`);
+    const body = encodeURIComponent(`Dear ${fullName},\n\nWe have reviewed your application and would like to discuss further steps. Please let us know your availability for a meeting.\n\nBest regards,\nSysco Lab`);
+    const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <>
       <div>
@@ -31,7 +38,6 @@ const InternRequest = () => {
           <CompanySidebar />
           <h1 className='text-one coursetitle'>Internship List</h1>
           <div className="card" id="intern-list">
-          
             <div className="table-responsive text-nowrap">
               <table className="table">
                 <thead>
@@ -47,16 +53,10 @@ const InternRequest = () => {
                 <tbody className="table-border-bottom-0">
                   {internshipData.map((intern, index) => (
                     <tr key={index}>
-                      <td>
-                        <span className="fw-medium">{intern.date}</span>
-                      </td>
+                      <td><span className="fw-medium">{intern.date}</span></td>
                       <td>{intern.fullName}</td>
-                      <td>
-                        <span className="fw-medium">{intern.contact}</span>
-                      </td>
-                      <td>
-                        <span className="fw-medium">{intern.email}</span>
-                      </td>
+                      <td><span className="fw-medium">{intern.contact}</span></td>
+                      <td><span className="fw-medium">{intern.email}</span></td>
                       <td>
                         <span 
                           className="fw-medium"
@@ -67,7 +67,7 @@ const InternRequest = () => {
                         </span>
                       </td>
                       <td>
-                        <button className="btn btn-primary">Send Email</button>
+                        <button className="btn btn-primary" onClick={() => handleEmail(intern.email, intern.fullName)}>Send Email</button>
                       </td>
                     </tr>
                   ))}

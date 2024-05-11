@@ -59,7 +59,7 @@ function App() {
           <Route path="/register" element={<><Navbar /><Register /></>}></Route>
           <Route path="/homepage" element={<><Navbar /><Homepage /></>}></Route>
           <Route path="/courses" element={<><Navbar /><Courses /></>}></Route>
-          <Route path="/mentoring" element={<><MentorNavbar /><Mentoring /></>}></Route>
+          <Route path="/mentoring" element={<><Navbar /><Mentoring /></>}></Route>
           <Route path="/resources" element={<><Navbar /><Resources /></>}></Route>
           <Route path="/discuss" element={<><Navbar /><Discuss /></>}></Route>
           <Route path="/InternshipReqForm" element={<><Navbar /><InternshipReqForm /></>}></Route>

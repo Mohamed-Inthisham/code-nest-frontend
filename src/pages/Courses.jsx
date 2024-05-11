@@ -43,8 +43,8 @@ function Courses() {
             <div className="card w-100 h-100">
               <img className="card-img-top" src={`http://localhost:8080/courseImages/${learnedCourse.image}`} alt="Card image cap" />
               <div className="card-body">
-                <h5 className="card-title"><a className='java-course-btn' href='/coursecontent'>{learnedCourse.ctitle}</a></h5>
-                <p className="card-text">{learnedCourse.cdescription}</p>
+                <h5 className="card-title"><a className='java-course-btn' href='/coursecontent'>{learnedCourse.title}</a></h5>
+                <p className="card-text">{learnedCourse.description}</p>
                 <div className="course-added">Course Added</div>
                 <Link to="/CourseContent" className="btn btn-primary">View Content</Link>
               </div>
@@ -65,9 +65,9 @@ function Courses() {
               <img className="card-img-top" src={`http://localhost:8080/courseImages/${course.image}`} alt="Course" />
               <div className="card-body">
                 <h5 className="card-title">
-                  <a className='java-course-btn' href='/coursecontent'>{course.ctitle}</a>
+                  <a className='java-course-btn' href='/coursecontent'>{course.title}</a>
                 </h5>
-                <p className="card-text">{course.cdescription}</p>
+                <p className="card-text">{course.description}</p>
                 <button disabled={isCourseAdded(course.id)} onClick={() => addCourseToMyLearnings(course)} className="btn btn-primary">
                   {isCourseAdded(course.id) ? "Course Added" : "Add Course"}
                 </button>

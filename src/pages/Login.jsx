@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Login.css';
-
+import axios from '../api/axios';
 const Login = () => {
   const [formData, setFormData] = useState({
     Username: '',
@@ -17,7 +17,7 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = {};
 
@@ -31,9 +31,31 @@ const Login = () => {
 
     setErrors(validationErrors); // Set errors after validation
 
-    if (Object.keys(validationErrors).length === 0) {
-      alert("Sign in successfully");
+    let payload = {
+      email: formData.Username,
+      password: formData.Password
     }
+
+    let res = await axios.post('users', payload)
+    console.log(res.data)
+    if (res.data) {
+      if (Object.keys(validationErrors).length === 0) {
+        alert("Sign in successfully");
+      }
+      if (res.data.role == 'STUDENT') {
+        window.location = '/homepage'
+      } else if (res.data.role == 'MENTOR') {
+        window.location = '/mentorHomePage'
+      } else {
+        window.location = '/courses'
+      }
+    } else {
+
+      alert("Sign failed");
+
+    }
+
+
   };
 
   return (

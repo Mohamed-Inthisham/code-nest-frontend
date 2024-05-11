@@ -75,7 +75,7 @@ function ManageCourses() {
                   <tr key={course.id}>
                     <td className='d-flex gap-3'>
                       <img src={`http://localhost:8080/courseImages/${course.image}`} alt={course.ctitle} className="course-thumbnail w-10" />
-                      <span class="fw-medium">{course.ctitle}</span>
+                      <span class="fw-medium">{course.title}</span>
                     </td>
                     <td>
                       <div class="managecoursebtnmain">

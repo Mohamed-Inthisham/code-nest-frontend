@@ -101,7 +101,7 @@ const EditRoadmap = () => {
             <div className="card-body-roadmap">
               <form className='roadmap-form' onSubmit={handleSubmit}>
                 <div className="text-field-roadmap">
-                  <label className="form-label" htmlFor="photo-upload">Upload Photo:</label>
+                  <label className="form-label" htmlFor="photo-upload">Upload Image:</label>
                   <input type="file" className="form-control" id="photo-upload" accept="image/*" onChange={handleFileChange} />
                   {errors.image && <span className="error-msg">{errors.image}</span>}
                 </div>

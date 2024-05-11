@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/InternshipReqForm.css';
 import axiosInstance from '../api/axios';
-import internshipForm from '../images/intern.png'
+import internshipForm from '../images/recruitment.webp'
 
 const InternshipReqForm = () => {
   const [formData, setFormData] = useState({
@@ -177,7 +177,7 @@ const InternshipReqForm = () => {
                   
                 <div className="row-con">
                   <div className="col-lg1">
-                    <div className="card-form ">
+                    <div className="card-form1 ">
                       <div className="card-header d-flex justify-content-between align-items-center">
                         <h3 className="req-to"><b>Request to Internship</b></h3>
                       </div>

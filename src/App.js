@@ -41,7 +41,6 @@ function App() {
   return (
 
     <div>
-      
       <div>
         <Router>
           <Routes>
@@ -87,7 +86,7 @@ function App() {
           <Route path="/internInformation" element={<><Navbar /><InternInformation /></>}></Route>
           <Route path="/addContent" element={<><MentorNavbar /><AddContent /></>}></Route>
           <Route path="/editor" element={<><Navbar /><Editor /></>}></Route>
-          <Route path="/approvalForm" element={<><MentorNavbar /><ApprovalReqForm /></>}></Route>
+          <Route path="/approvalReqForm" element={<><MentorNavbar /><ApprovalReqForm /></>}></Route>
 
         </Routes>
       </Router>

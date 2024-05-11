@@ -76,32 +76,33 @@ export default function CourseContent() {
     <form>
         <div class="card-content">
         <h1 className='topic'>Java Script Basics</h1>
-        <h3 className='subtopic'>Variables are containers for storing data values.</h3>
+        <h3 className='subtopic'>Declaring a JavaScript Variable</h3>
      
-        <h5 className='subtopic'>In Java Script, there are different types of variables, for example:</h5>
+        <h5 className='subtopic'>You declare a JavaScript variable with the var or the let keyword:</h5>
        
        <ul className='ulList'>
-                <li>String - stores text, such as "Hello". String values are surrounded by double quotes</li>
-                <li>int - stores integers (whole numbers), without decimals, such as 123 or -123</li>
-                <li>float - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
-                <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
-                <li>boolean - stores values with two states: true or false</li>
+                <li>The var keyword was used in all JavaScript code from 1995 to 2015.</li>
+                <li>The let and const keywords were added to JavaScript in 2015.</li>
+                <li>The var keyword should only be used in code written for older browsers.</li>
+             
         </ul>
         
-          <div className='example'>
-            <h5 class="example-title">Example 1</h5>
-              <p class="card-text"><b>Create a variable called name of type String and assign it the value "John":</b></p>
-               <p>String name = "John";<br />
-               System.out.println(name);</p>
-               <h5 class="example-title">Example 2</h5>
-              <p class="card-text"><b>Create a variable called myNum of type int and assign it the value 15:</b></p>
-               <p>int myNum = 15;<br />
-               System.out.println(myNum);</p>
-               <h5 class="example-title">Example 3</h5>
-            <p class="card-text"><b>You can also declare a variable without assigning the value, and assign the value later:</b></p>
-             <p>int myNum;<br />
-             myNum = 15;<br />
-             System.out.println(myNum);</p>
+          <div className='example1'>
+            
+              <p class="card-text"><b>Example using let</b></p>
+               <p>let carName = "Volvo";<br />
+                   document.getElementById("demo").innerHTML = carName;</p>
+               
+              <p class="card-text"><b>Example using const</b></p>
+               <p>const x = 5;<br />
+               const y = 6;<br />
+               const z = x + y;</p>
+              
+
+              <p class="card-text"><b>Mixed Example</b></p>
+               <p>const price1 = 5;<br />
+               const price2 = 6;<br />
+               let total = price1 + price2;</p>
 
              <button type='button' className='btn btn-primary'><a className='btn-color' href="/editor">Try it Your Self</a></button>
            </div>
@@ -111,29 +112,30 @@ export default function CourseContent() {
    </div>
 
        
-
-        <div class="card-content1">
+      
+        <div class="card-content">
         <h5 id="topic-exe">Test Yourself With Exercises </h5>
+       
           <div class="card-body-exe">
-              <p class="card-text">1.Create a variable named carName and assign the value Volvo to it.</p>
+              <p class="card-text">1.Create a variable called carName and assign the value Volvo to it.</p>
                 <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-                    <label class="form-check-label" for="inlineRadio1">String car ="Volvo";</label>
+                    <label class="form-check-label" for="inlineRadio1">carName let = "Volvo";</label>
                   </div> 
 
                   <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-                    <label class="form-check-label" for="inlineRadio1">String Volvo= "car";</label>
+                    <label class="form-check-label" for="inlineRadio1">let carName = "Volvo";</label>
                   </div> 
 
                   <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"/>
-                    <label class="form-check-label" for="inlineRadio1">"Volvo" car = String;</label>
+                    <label class="form-check-label" for="inlineRadio1">"Volvo"=let carName;</label>
                   </div> 
 
                   <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"/>
-                    <label class="form-check-label" for="inlineRadio1">car String = "Volvo";</label>
+                    <label class="form-check-label" for="inlineRadio1">carName = "Volvo";</label>
                   </div> 
 
                <button type="button" id="btnn" class="btn btn-info">Submit</button>
@@ -142,28 +144,28 @@ export default function CourseContent() {
           </div>
         </div>
 
-        <div class="card-content1">
+        <div class="card-content">
           <div class="card-body-exe">
             
-              <p class="card-text">2.Create a variable named maxSpeed and assign the value 120 to it.</p>
+              <p class="card-text">2.Create a variable called y, assign the value 100 to it.</p>
                 <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"/>
-                    <label class="form-check-label" for="inlineRadio1">120 =Int maxSpeed;</label>
+                    <label class="form-check-label" for="inlineRadio1">100=let y </label>
                   </div> 
 
                   <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"/>
-                    <label class="form-check-label" for="inlineRadio1">Int maxSpeed=120;</label>
+                    <label class="form-check-label" for="inlineRadio1">ylet = 100</label>
                   </div> 
 
                   <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"/>
-                    <label class="form-check-label" for="inlineRadio1">maxSpeed Int = 120</label>
+                    <label class="form-check-label" for="inlineRadio1">y = 100 let</label>
                   </div> 
 
                   <div className="answer1">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option4"/>
-                    <label class="form-check-label" for="inlineRadio1">maxSpeed 120 = Int</label>
+                    <label class="form-check-label" for="inlineRadio1">let y= 100</label>
                   </div> 
 
                <button type="button" id="btnn" class="btn btn-info">Submit</button>
@@ -172,6 +174,67 @@ export default function CourseContent() {
           </div>
         </div>
 
+        <div class="card-content">
+          <div class="card-body-exe">
+            
+              <p class="card-text">3.Create a variable called x, assign the value 50 to it.</p>
+                <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">50=let x </label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"/>
+                    <label class="form-check-label" for="inlineRadio1">x let = 50</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"/>
+                    <label class="form-check-label" for="inlineRadio1">x = 50 let</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option4"/>
+                    <label class="form-check-label" for="inlineRadio1">let x = 50</label>
+                  </div> 
+
+               <button type="button" id="btnn" class="btn btn-info">Submit</button>
+               
+               
+          </div>
+        </div>
+
+
+        <div class="card-content">
+          <div class="card-body-exe">
+            
+              <p class="card-text">4.Create a variable called x, assign the value 10 to it.</p>
+                <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1"/>
+                    <label class="form-check-label" for="inlineRadio1">10=let x </label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"/>
+                    <label class="form-check-label" for="inlineRadio1">x let = 10</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"/>
+                    <label class="form-check-label" for="inlineRadio1">x = 10 let</label>
+                  </div> 
+
+                  <div className="answer1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option4"/>
+                    <label class="form-check-label" for="inlineRadio1">let x = 10</label>
+                  </div> 
+
+               <button type="button" id="btnn" class="btn btn-info">Submit</button>
+               
+               
+          </div>
+        </div>
+   
 
     </form>
         

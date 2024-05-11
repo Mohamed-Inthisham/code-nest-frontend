@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import '../css/InternRequest.css';
-import CompanySidebar from '../components/CompanySidebar';
 import axiosInstance from '../api/axios';
+import CompanySidebar from '../components/CompanySidebar';
+import '../css/InternRequest.css';
 
 const InternRequest = () => {
   const [internshipData, setInternshipData] = useState([]);
@@ -29,6 +29,25 @@ const InternRequest = () => {
     const body = encodeURIComponent(`Dear ${fullName},\n\nWe have reviewed your application and would like to discuss further steps. Please let us know your availability for a meeting.\n\nBest regards,\nSysco Lab`);
     const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
     window.location.href = mailtoUrl;
+  };
+
+  const handleDownloadPdf = async () => {
+    try {
+      const response = await axiosInstance.get('/report/pdf', { responseType: 'blob' });
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'report.pdf');
+      document.body.appendChild(link);
+      link.click();
+
+      link.parentNode.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      alert('Download successfully!');
+    } catch (error) {
+      console.error('Failed to download file:', error);
+      alert('Failed to download file!');
+    }
   };
 
   return (
@@ -73,9 +92,11 @@ const InternRequest = () => {
                   ))}
                 </tbody>
               </table>
+              
             </div>
           </div>
         </div>
+        <button className="btn btn-danger" onClick={handleDownloadPdf}>Download PDF</button>
       </div>
     </>
   );

@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import CompanySidebar from '../components/CompanySidebar';
 import '../css/ManageQuiz.css'
-import image5 from '../images/myLearning5.png'
-import image3 from '../images/myLearning2.png'
-import image4 from '../images/javascript.webp'
+import image5 from '../images/1.png'
+import image3 from '../images/11.png'
+import image4 from '../images/14.png'
 
 export default function ManageQuiz() {
   return (

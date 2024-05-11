@@ -27,7 +27,7 @@ export default function CourseContent() {
             <ul className="menu-inner py-1">
           
          <li className="menu-item">
-            <a href="javascript:void(0);" className="menu-link menu-toggle">
+            <a href="javascript:void(0);" className="menu-link menu-toggle" >
               
               <div data-i18n="Layouts"> Java Script Introduction</div>
             </a>

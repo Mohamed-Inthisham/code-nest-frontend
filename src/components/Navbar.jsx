@@ -9,7 +9,7 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-example navbar-expand-lg bg-dark">
         <div className="container-fluid">
-          <div><span ><img className="logo" src={Logo} alt="" /></span></div>
+          <div><span > <Link to="/homepage"><img className="logo" style={{ cursor: 'pointer' }} src={Logo} alt="" /></Link></span></div>
           
           <div className="collapse navbar-collapse" id="navbar-ex-3">
             <div className="navbar-nav me-auto navlinks">

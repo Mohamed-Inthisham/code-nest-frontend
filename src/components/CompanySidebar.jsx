@@ -66,11 +66,12 @@ function CompanySidebar() {
                                 </a>
                                 </li>
 
-                                <li className="menu-item active ">
-                                <a href="/internRequests" className="menu-link">
-                                <div data-i18n="Layouts">Intern approvel</div>
+                                <div className='req'></div>
+                            <li className="menu-item active">
+                                <a href="/ApprovalReqForm" className="menu-link">
+                                <div data-i18n="Layouts">Approval Request</div>
                                 </a>
-                                </li>
+                            </li>            
                     
                             </ul>
                         </aside>

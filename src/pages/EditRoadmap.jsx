@@ -1,34 +1,37 @@
-// src/components/EditRoadmap.js
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../api/axios';
 import MentorSidebar from '../components/MentorSidebar';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../css/AddRoadmap.css';
 
 const EditRoadmap = () => {
   const { roadmapId } = useParams();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    image: null,
     rmTitle: '',
     description: '',
-    mentorName: ''
+    mentorName: '',
+    image: null
   });
-
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const fetchRoadmapData = async () => {
       try {
         const response = await axiosInstance.get(`/roadmaps/${roadmapId}`);
-        setFormData({
-          rmTitle: response.data.rmTitle,
-          description: response.data.description,
-          mentorName: response.data.mentorName,
-          image: response.data.image
-        });
+        if (response.data) {
+          setFormData({
+            rmTitle: response.data.rmTitle,
+            description: response.data.description,
+            mentorName: response.data.mentorName,
+            image: response.data.image
+          });
+        } else {
+          alert('No data found for this roadmap');
+        }
       } catch (error) {
         console.error('Error fetching roadmap data:', error);
-        alert('Failed to load roadmap data');
+        alert('Failed to load roadmap data: ' + error.message);
       }
     };
 
@@ -54,17 +57,12 @@ const EditRoadmap = () => {
     let formValid = true;
     const newErrors = {};
 
-    ['rmTitle', 'description', 'mentorName'].forEach(field => {
+    Object.keys(formData).forEach(field => {
       if (!formData[field].trim()) {
         newErrors[field] = `${field.charAt(0).toUpperCase() + field.slice(1)} is required`;
         formValid = false;
       }
     });
-
-    if (!formData.image) {
-      newErrors.image = 'Image is required';
-      formValid = false;
-    }
 
     setErrors(newErrors);
 
@@ -73,10 +71,9 @@ const EditRoadmap = () => {
     }
 
     const data = new FormData();
-    data.append('image', formData.image);
-    data.append('rmTitle', formData.rmTitle);
-    data.append('description', formData.description);
-    data.append('mentorName', formData.mentorName);
+    for (let key in formData) {
+      data.append(key, formData[key]);
+    }
 
     try {
       await axiosInstance.put(`/roadmaps/${roadmapId}`, data, {
@@ -85,6 +82,7 @@ const EditRoadmap = () => {
         }
       });
       alert('Roadmap updated successfully');
+      navigate('/manageRoadmaps');
     } catch (error) {
       console.error('Error updating roadmap:', error);
       alert('Error updating roadmap: ' + error.message);
@@ -107,9 +105,10 @@ const EditRoadmap = () => {
                 </div>
                 <div className="text-field-roadmap">
                   <label className="form-label" htmlFor="rmTitle">Roadmap Title:</label>
-                  <input type="text" className="form-control" id="rmTitle" name="rmTitle" value={formData.rmTitle} onChange={handleChange} />
+                  <input type of="text" className="form-control" id="rmTitle" name="rmTitle" value={formData.rmTitle} onChange={handleChange} />
                   {errors.rmTitle && <span className="error-msg">{errors.rmTitle}</span>}
                 </div>
+                
                 <div className="text-field-roadmap">
                   <label className="form-label" htmlFor="description">Description:</label>
                   <textarea className="form-control" id="description" rows="4" name="description" value={formData.description} onChange={handleChange}></textarea>
@@ -120,7 +119,7 @@ const EditRoadmap = () => {
                   <input type="text" className="form-control" id="mentorName" name="mentorName" value={formData.mentorName} onChange={handleChange} />
                   {errors.mentorName && <span className="error-msg">{errors.mentorName}</span>}
                 </div>
-                <button type="submit" className="btn-roadmap">Update</button>
+                <button type="submit" className="btn-roadmap btn-primary">Update</button>
               </form>
             </div>
           </div>

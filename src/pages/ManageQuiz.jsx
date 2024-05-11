@@ -4,6 +4,7 @@ import CompanySidebar from '../components/CompanySidebar';
 import '../css/ManageQuiz.css'
 import image5 from '../images/myLearning5.png'
 import image3 from '../images/myLearning2.png'
+import image4 from '../images/javascript.webp'
 
 export default function ManageQuiz() {
   return (
@@ -21,9 +22,9 @@ export default function ManageQuiz() {
             <div className="row row-cols-1 row-cols-md-3 g-4 mb-5 viewcards">
                   <div className="col">
                     <div className="card h-70">
-                      <img className="card-img-top" src='/static/media/course2.92ae8aec8fdec2bd9645.png' alt="Card image cap" />
+                      <img className="card-img-top" src={image4} alt="Card image cap" />
                       <div className="card-body">
-                        <h5 className="card-title">Introduction to Java</h5>
+                        <h5 className="card-title">Introduction to Javascript</h5>
                         <button type="button" class="btn btn-info btn-edit"><a className='edit-btn' href='/editquizhome'>Go to Quizzes </a></button>
                         
                       </div>
@@ -52,11 +53,6 @@ export default function ManageQuiz() {
                     </div>
                   </div>
 
-                  
-
-                
-
-                
 
                   
             </div>

@@ -8,13 +8,27 @@ export default function ManageResourses() {
     resTitle: '',
     description: ''
   });
+  const [editData, setEditData] = useState({
+    resTitle: '',
+    description: '',
+    id: null
+  });
+  const [resources, setResources] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       [name]: value
-    });
+    }));
+  };
+
+  const handleEditChange = (e) => {
+    const { name, value } = e.target;
+    setEditData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -22,29 +36,42 @@ export default function ManageResourses() {
     try {
       await axiosInstance.post('resources', formData);
       alert('Resource added successfully');
-      // Optionally, reset the formData state here if needed
       setFormData({ resTitle: '', description: '' });
-      // Optionally, redirect to a different page or perform any other action upon successful addition
+      fetchResources();
     } catch (error) {
       console.error('Error adding resource:', error);
       alert('Error adding resource');
     }
   };
 
-  const [resources, setResources] = useState([]);
+  const handleEditSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axiosInstance.put(`resources/${editData.id}`, {
+        resTitle: editData.resTitle,
+        description: editData.description
+      });
+      alert('Resource updated successfully');
+      setEditData({ resTitle: '', description: '', id: null });
+      fetchResources();
+    } catch (error) {
+      console.error('Error updating resource:', error);
+      alert('Error updating resource');
+    }
+  };
 
   useEffect(() => {
-    const fetchResources = async () => {
-      try {
-        const response = await axiosInstance.get('resources');
-        setResources(response.data);
-      } catch (error) {
-        console.error('Error fetching resources:', error);
-      }
-    };
-
     fetchResources();
   }, []);
+
+  const fetchResources = async () => {
+    try {
+      const response = await axiosInstance.get('resources');
+      setResources(response.data);
+    } catch (error) {
+      console.error('Error fetching resources:', error);
+    }
+  };
 
   const normalizeLink = (link) => {
     if (!link.startsWith('http://') && !link.startsWith('https://')) {
@@ -62,16 +89,19 @@ export default function ManageResourses() {
     }
   };
 
-  const handleEdit = (id) => {
-    // Implement your edit functionality here, e.g., redirect to an edit page
-    console.log(`Editing resource with ID: ${id}`);
+  const handleEdit = (resource) => {
+    setEditData({
+      resTitle: resource.resTitle,
+      description: resource.description,
+      id: resource.id
+    });
   };
 
-  return ( 
+  return (
     <div className="layout-wrapper layout-content-navbar">
       <MentorSidebar />
       <div className="layout-container">
-        <div className="text-one coursetitle"> Manage Resourses </div>
+        <div className="text-one coursetitle">Manage Resources</div>
         <br />
         <div className="card-content mainA">
           <div className="topic-btn">
@@ -110,8 +140,36 @@ export default function ManageResourses() {
                 </div>
               </div>
 
-              {/* Edit model */}
-              {/* Your existing edit modal code here */}
+              {/* Edit Resource Modal */}
+              <div className="modal fade" id="editbasic" tabindex="-1" aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                  <form onSubmit={handleEditSubmit}>
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLabel1">Edit Resources</h5>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div className="modal-body">
+                        <div className="row">
+                          <div className="col mb-3">
+                            <label for="resTitle" className="form-label">Title</label>
+                            <input type="text" id="resTitle" name="resTitle" className="form-control" placeholder="Enter Title" value={editData.resTitle} onChange={handleEditChange} />
+                          </div>
+                        </div>
+                        <div className="row g-2">
+                          <div className="col mb-3">
+                            <label for="description" className="form-label">Link</label>
+                            <input type="text" id="description" name="description" className="form-control" placeholder="Enter Link" value={editData.description} onChange={handleEditChange} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-primary" onClick={handleEditSubmit}>Update</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
           <div className="table-responsive text-nowrap">
@@ -120,10 +178,8 @@ export default function ManageResourses() {
                 <tr>
                   <th>Title</th>
                   <th>Link</th>
-                  <th>Actions
-                    </th>
-                  </tr>
-
+                  <th>Actions</th>
+                </tr>
               </thead>
               <tbody>
                 {resources.map((resource, index) => (
@@ -140,10 +196,11 @@ export default function ManageResourses() {
                           <i className="bx bx-dots-vertical-rounded"></i>
                         </button>
                         <div className="dropdown-menu">
-                          <button className="dropdown-item" 
-                          data-bs-toggle="modal"
-                          data-bs-target="#editbasic" 
-                          onClick={() => handleEdit(resource.id)}>
+                          <button className="dropdown-item"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editbasic"
+                            onClick={() => handleEdit(resource)}
+                          >
                             <i className="bx bx-edit-alt me-1"></i> Edit
                           </button>
                           <button className="dropdown-item" onClick={() => handleDelete(resource.id)}>

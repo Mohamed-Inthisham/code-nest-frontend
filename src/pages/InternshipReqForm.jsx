@@ -214,8 +214,9 @@ const InternshipReqForm = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                               />
-                              {errors.email && <span className="error-msg">{errors.email}</span>}
+                              
                             </div>
+                            {errors.email && <span className="error-msg">{errors.email}</span>}
                           </div>
 
                           <div className="text-feild">

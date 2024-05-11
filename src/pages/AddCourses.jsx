@@ -5,16 +5,16 @@ import axiosInstance from '../api/axios'; // Make sure axiosInstance is properly
 const AddCourses = () => {
   const [formData, setFormData] = useState({
     image: null,
-    cTitle: '',
-    cDescription: '',
-    companyName: ''
+    title: '',
+    description: '',
+    comp: ''
   });
 
   const [formErrors, setFormErrors] = useState({
     image: '',
-    cTitle: '',
-    cDescription: '',
-    companyName: ''
+    title: '',
+    description: '',
+    comp: ''
   });
 
   // Handle form input changes
@@ -53,14 +53,14 @@ const AddCourses = () => {
     if (!formData.image) {
       errors.image = 'Image is required';
     }
-    if (!formData.cTitle.trim()) {
-      errors.cTitle = 'Course title is required';
+    if (!formData.title.trim()) {
+      errors.title = 'Course title is required';
     }
-    if (!formData.cDescription.trim()) {
-      errors.cDescription = 'Course description is required';
+    if (!formData.description.trim()) {
+      errors.description = 'Course description is required';
     }
-    if (!formData.companyName.trim()) {
-      errors.companyName = 'Company name is required';
+    if (!formData.comp.trim()) {
+      errors.comp = 'Company name is required';
     }
 
     if (Object.keys(errors).length > 0) {
@@ -70,9 +70,9 @@ const AddCourses = () => {
 
     const data = new FormData();
     data.append('image', formData.image);
-    data.append('cTitle', formData.cTitle);
-    data.append('cDescription', formData.cDescription);
-    data.append('companyName', formData.companyName);
+    data.append('title', formData.title);
+    data.append('description', formData.description);
+    data.append('comp', formData.comp);
 
     try {
       // Send POST request to backend
@@ -109,19 +109,19 @@ const AddCourses = () => {
                     {formErrors.image && <div className="error">{formErrors.image}</div>}
                   </div>
                   <div className="text-feild">
-                    <label className="form-label" htmlFor="cTitle">Course Title:</label>
-                    <input type="text" className="form-control" id="cTitle" name="cTitle" value={formData.cTitle} onChange={handleChange} />
-                    {formErrors.cTitle && <div className="error">{formErrors.cTitle}</div>}
+                    <label className="form-label" htmlFor="title">Course Title:</label>
+                    <input type="text" className="form-control" id="title" name="title" value={formData.title} onChange={handleChange} />
+                    {formErrors.title && <div className="error">{formErrors.title}</div>}
                   </div>
                   <div className="text-field">
-                    <label className="form-label" htmlFor="cDescription">Description:</label>
-                    <textarea className="form-control" id="cDescription" rows="4" name="cDescription" value={formData.cDescription} onChange={handleChange}></textarea>
-                    {formErrors.cDescription && <div className="error">{formErrors.cDescription}</div>}
+                    <label className="form-label" htmlFor="description">Description:</label>
+                    <textarea className="form-control" id="description" rows="4" name="description" value={formData.description} onChange={handleChange}></textarea>
+                    {formErrors.description && <div className="error">{formErrors.description}</div>}
                   </div>
                   <div className="text-field">
-                    <label className="form-label" htmlFor="companyName">Company Name:</label>
-                    <input type="text" className="form-control" id="companyName" name="companyName" value={formData.companyName} onChange={handleChange} />
-                    {formErrors.companyName && <div className="error">{formErrors.companyName}</div>}
+                    <label className="form-label" htmlFor="comp">Company Name:</label>
+                    <input type="text" className="form-control" id="comp" name="comp" value={formData.comp} onChange={handleChange} />
+                    {formErrors.comp && <div className="error">{formErrors.comp}</div>}
                   </div>
                   <button type="submit" className="btn btn-primary">ADD</button>
                 </form>

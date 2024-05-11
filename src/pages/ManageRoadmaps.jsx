@@ -75,7 +75,7 @@ function ManageRoadmaps() {
                         </button>
                         <button
                           type="button"
-                          className="manageroadmapbtn1"
+                          className="manageroadmapbtn1 btn-danger"
                           onClick={() => handleDelete(roadmap.id)}
                         >
                           Delete

@@ -96,7 +96,7 @@ const InternRequest = () => {
             </div>
           </div>
         </div>
-        <button className="btn btn-danger" onClick={handleDownloadPdf}>Download PDF</button>
+        <button className="btn btn-success" onClick={handleDownloadPdf}>Download PDF</button>
       </div>
     </>
   );

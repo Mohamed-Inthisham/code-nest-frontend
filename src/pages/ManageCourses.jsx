@@ -5,30 +5,49 @@ import axiosInstance from '../api/axios';
 
 function ManageCourses() {
   const [courses, setCourses] = useState([]);
-  const [error, setError] = useState(null);
-
-  const fetchCourses = async () => {
-    try {
-      const response = await axiosInstance.get('courses');
-      setCourses(response.data);
-    } catch (error) {
-      console.error('Error fetching courses:', error);
-      setError('Error fetching courses. Please try again later.');
-    }
-  };
+  const [error, setError] = useState('');
 
   useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await axiosInstance.get('courses');
+        setCourses(response.data);
+      } catch (error) {
+        console.error('Error fetching courses:', error);
+        setError('Error fetching courses. Please try again later.');
+      }
+    };
+
     fetchCourses();
   }, []);
 
   const handleDelete = async (id) => {
     try {
       await axiosInstance.delete(`courses/${id}`);
-      // If deletion is successful, fetch updated courses data
-      fetchCourses();
+      const updatedCourses = courses.filter(course => course.id !== id);
+      setCourses(updatedCourses);
     } catch (error) {
       console.error('Error deleting course:', error);
       setError('Error deleting course. Please try again later.');
+    }
+  };
+
+  const handleDownloadReport = async () => {
+    try {
+      const response = await axiosInstance.get('/course/report/pdf', { responseType: 'blob' });
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'course_report.pdf');
+      document.body.appendChild(link);
+      link.click();
+      
+      link.parentNode.removeChild(link);
+      window.URL.revokeObjectURL(url);
+      alert('Download successfully!');
+    } catch (error) {
+      console.error('Failed to download report:', error);
+      alert('Failed to download report!');
     }
   };
 
@@ -69,9 +88,13 @@ function ManageCourses() {
                 ))}
               </tbody>
             </table>
+
+            
           </div>
         </div>
+        <button className="btn btn-success" onClick={handleDownloadReport}>Download PDF</button>
       </div>
+      
     </div>
   );
 }

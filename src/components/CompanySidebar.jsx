@@ -34,7 +34,7 @@ function CompanySidebar() {
                                     </a>
                                 </li> */}
                                 <li className="menu-item ">
-                                    <a href="/manageCourses" className="menu-link">
+                                    <a href="/manageCourses" className="menu-link" style={{ cursor: 'pointer' }}>
                                     <div data-i18n="Without navbar">Manage Courses</div>
                                     </a>
                                 </li>
@@ -53,7 +53,7 @@ function CompanySidebar() {
                                     </a>
                                 </li> */}
                                 <li className="menu-item ">
-                                    <a href="/ManageQuiz" className="menu-link">
+                                    <a href="/ManageQuiz" className="menu-link" style={{ cursor: 'pointer' }}>
                                     <div data-i18n="ManageQuiz">Manage Quizzes</div>
                                     </a>
                                 </li>
@@ -61,13 +61,13 @@ function CompanySidebar() {
                             </li>
 
                             <li className="menu-item active ">
-                                <a href="/internRequests" className="menu-link">
-                                <div data-i18n="Layouts">Intern</div>
+                                <a href="/internRequests" className="menu-link" style={{ cursor: 'pointer' }}>
+                                <div data-i18n="Layouts">Intern Requests</div>
                                 </a>
                                 </li>
                                 <div className='req'></div>
                             <li className="menu-item active">
-                                <a href="/ApprovalReqForm" className="menu-link">
+                                <a href="/ApprovalReqForm" className="menu-link" style={{ cursor: 'pointer' }}>
                                 <div data-i18n="Layouts">Approval Request</div>
                                 </a>
                             </li>            

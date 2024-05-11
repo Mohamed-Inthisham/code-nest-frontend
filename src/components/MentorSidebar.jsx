@@ -34,7 +34,7 @@ function MentorSidebar() {
                                     </a>
                                 </li> */}
                                 <li className="menu-item ">
-                                    <a href="/manageRoadmaps" className="menu-link">
+                                    <a href="/manageRoadmaps" className="menu-link" style={{ cursor: 'pointer' }}>
                                     <div data-i18n="Without navbar">Manage Roadmap</div>
                                     </a>
                                 </li>
@@ -53,7 +53,7 @@ function MentorSidebar() {
                                     </a>
                                 </li> */}
                                 <li className="menu-item ">
-                                    <a href="/ManageResourses" className="menu-link">   
+                                    <a href="/ManageResourses" className="menu-link" style={{ cursor: 'pointer' }}>   
                                     <div data-i18n="Without navbar">Manage Resourses</div>
                                     </a>
                                 </li>
@@ -66,6 +66,11 @@ function MentorSidebar() {
                                 <div data-i18n="Layouts">Intern</div>
                                 </a>
                                 </li> */}
+                                 <li className="menu-item active">
+                                <a href="/MentorApprovalReqForm" className="menu-link" style={{ cursor: 'pointer' }}>
+                                <div data-i18n="Layouts">Approval Request</div>
+                                </a>
+                            </li>        
                     
                             </ul>
                         </aside>

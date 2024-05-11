@@ -65,6 +65,13 @@ function CompanySidebar() {
                                 <div data-i18n="Layouts">Intern</div>
                                 </a>
                                 </li>
+
+                                <div className='req'></div>
+                            <li className="menu-item active">
+                                <a href="/ApprovalReqForm" className="menu-link">
+                                <div data-i18n="Layouts">Approval Request</div>
+                                </a>
+                            </li>            
                     
                             </ul>
                         </aside>

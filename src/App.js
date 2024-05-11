@@ -35,6 +35,7 @@ import InternInformation from "./pages/InternInformation";
 import AddContent from "./pages/AddContent";
 import Editor from "./pages/Editor";
 import ApprovalReqForm from "./pages/ApprovalReqForm";
+import MentorApprovalReqForm from "./pages/MentorApprovalReqForm"
 
 function App() {
 
@@ -87,6 +88,7 @@ function App() {
           <Route path="/addContent" element={<><MentorNavbar /><AddContent /></>}></Route>
           <Route path="/editor" element={<><Navbar /><Editor /></>}></Route>
           <Route path="/approvalReqForm" element={<><MentorNavbar /><ApprovalReqForm /></>}></Route>
+          <Route path="/mentorApprovalReqForm" element={<><MentorNavbar /><MentorApprovalReqForm /></>}></Route>
 
         </Routes>
       </Router>

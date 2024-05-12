@@ -17,6 +17,7 @@ function Navbar() {
               <a className="nav-item nav-link" href="/homepage" style={{ cursor: 'pointer' }}>Home</a>
               <a className="nav-item nav-link" href="/courses" style={{ cursor: 'pointer' }}>Courses</a>
               <a className="nav-item nav-link" href="/mentoring" style={{ cursor: 'pointer' }}>Mentoring</a>
+              <button><a className="nav-item nav-linkv" href="/" style={{ cursor: 'pointer' }}>Log Out</a></button>
             </div>
 
             </div>

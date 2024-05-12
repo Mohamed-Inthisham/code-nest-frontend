@@ -22,6 +22,7 @@ function Navbar() {
 
             </div>
             <div>
+            <button><a className="nav-item nav-linkvmentor" href="/" style={{ cursor: 'pointer' }}>Log Out</a></button>
             <i className="bx bx-user-circle" id="userlogo" />
             </div>
           </div>

@@ -1,7 +1,7 @@
 .navlinks{
     position: absolute;
     left: 60%;
-    gap: 70px;
+    gap: 65px;
     top: 15%;
 }
 .nav-link:hover{
@@ -18,4 +18,34 @@
     width: 300px;
     height: 50px;
     
+}
+
+.nav-linkv{
+    background-color: blueviolet;
+    position: absolute;
+    color: aliceblue;
+    width: 80px;
+    top: 8px;
+    padding: 5px 5px 5px 10px;
+}
+
+.nav-linkv:hover{
+    background-color: rgb(157, 76, 232);
+    color: aliceblue;
+}
+
+.nav-linkvmentor{
+    background-color: blueviolet;
+    margin-top: 10px;
+    margin-left: 950px;
+    position: absolute;
+    color: aliceblue;
+    width: 80px;
+    top: 8px;
+    padding: 5px 5px 5px 10px;
+}
+
+.nav-linkvmentor:hover{
+    background-color: rgb(157, 76, 232);
+    color: aliceblue;
 }
